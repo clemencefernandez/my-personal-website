@@ -1,0 +1,25 @@
+import { useState, useEffect } from "react";
+
+const useScrollProgress = () => {
+  const [completion, setCompletion] = useState(0);
+
+  useEffect(() => {
+    const updateScrollCompletion = () => {
+      console.log(document.body.scrollHeight, window.innerHeight);
+      const currentProgress = window.scrollY;
+      const scrollHeight = document.body.scrollHeight - window.innerHeight;
+      console.log({ scrollHeight, currentProgress });
+      if (scrollHeight) {
+        setCompletion(Number(currentProgress / scrollHeight) * 100);
+      }
+    };
+
+    // event
+    window.addEventListener("scroll", updateScrollCompletion);
+    // clear event
+    return () => window.removeEventListener("scroll", updateScrollCompletion);
+  }, []);
+
+  return completion;
+};
+export default useScrollProgress;
