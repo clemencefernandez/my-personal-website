@@ -19,7 +19,6 @@ const Template = ({ children }: PropsWithChildren) => {
         animate="enter"
         transition={{ type: "linear", delay: 0.2, duration: 0.4 }}
       >
-        <div>{"test template"}</div>
         {children}
       </motion.main>
       {/* completion bar */}
