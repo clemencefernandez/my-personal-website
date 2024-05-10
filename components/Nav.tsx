@@ -6,6 +6,7 @@ import { HTMLAttributes } from "react";
 const links = [
   { path: "/", name: "home" },
   { path: "/contact", name: "contact" },
+  { path: "/blog", name: "Blog" },
   { path: "/projects", name: "My Projects" },
 ];
 
