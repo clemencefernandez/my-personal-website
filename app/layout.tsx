@@ -23,7 +23,9 @@ export default function RootLayout({
     <html lang="fr" suppressHydrationWarning>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="light">
-          <Header /> {children} <Footer />
+          <Header />
+          <div className="mx-8 sm:mx-20">{children}</div>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
