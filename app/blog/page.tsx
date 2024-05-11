@@ -13,7 +13,7 @@ const Blog = async () => {
       {allPost.map((post) => {
         return (
           <Link key={post.id} href={`/blog/${post.slug}`} title={post.title}>
-            {post.content}
+            {post.title}
             <Image
               alt={post.title}
               src={post.urlImage}
