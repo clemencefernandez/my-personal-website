@@ -20,7 +20,12 @@ const Socials = ({ containerStyles, iconStyles }: Props) => {
   return (
     <div className={`${containerStyles}`}>
       {icons.map((icon, index) => (
-        <a target="_blank" key={index} href={icon.path}>
+        <a
+          target="_blank"
+          key={index}
+          href={icon.path}
+          aria-label={`Link to ${icon.name}`}
+        >
           <div className={`${iconStyles}`}>{icon.name}</div>
         </a>
       ))}
