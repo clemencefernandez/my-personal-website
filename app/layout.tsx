@@ -24,7 +24,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="light">
           <Header />
-          <div className="mx-8 sm:mx-20">{children}</div>
+          <main className="mx-8 sm:mx-20">{children}</main>
           <Footer />
         </ThemeProvider>
       </body>

@@ -1,6 +1,7 @@
 import prisma from "@/lib/prisma";
-import Image from "next/image";
+import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
+import { PostHeader } from "./components/PostHeader";
 
 export const generateStaticParams = async () => {
   //pour générer automatiquement tous les posts
@@ -29,31 +30,14 @@ const Article = async ({ params: { slug } }: Props) => {
     },
   });
 
-  if (!post) return <></>; // à changer
+  if (!post) return notFound();
 
   return (
     <div>
-      <h1>
-        <span className="block text-base text-center text-primary font-semibold tracking-wide uppercase">
-          Clémence Fernandez - Blog
-        </span>
-        <span className="mt-2 block text-3xl text-center leading-8 font-bold tracking-tight sm:text-4xl">
-          {post.title}
-        </span>
-      </h1>
-
-      <Image
-        src={post.urlImage}
-        width={800}
-        height={800}
-        alt="Title Image"
-        priority
-        className="rounded-lg mt-8 border"
-      />
-
-      <div className="mt-16 prose prose-blue prose-lg dark:prose-invert prose-li:marker:text-primary prose-a:text-primary">
+      <article>
+        <PostHeader post={post} />
         <ReactMarkdown>{post.content}</ReactMarkdown>
-      </div>
+      </article>
     </div>
   );
 };
