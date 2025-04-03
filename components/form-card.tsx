@@ -1,5 +1,5 @@
 "use client";
-import * as React from "react";
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -9,39 +9,51 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import FormFieldInput, { FormFieldInputProps } from "./form-field-input";
 
-import { JSX, useState } from "react";
-import FormFieldInput from "./form-field-input";
+type InputProps = Pick<
+  FormFieldInputProps,
+  "validResponses" | "label" | "description"
+>;
 
-const FormCard = (): JSX.Element => {
-  const [isInput1Correct, setIsInput1Correct] = useState<boolean>(false);
-  const [isInput2Correct, setIsInput2Correct] = useState<boolean>(false);
+interface FormCardProps {
+  title: string;
+  description: string;
+  inputs: InputProps[];
+}
+
+const FormCard: React.FC<FormCardProps> = ({ inputs, title, description }) => {
+  const [validInputs, setValidInputs] = useState<boolean[]>(
+    Array(inputs.length).fill(false)
+  );
+
+  const handleValidationChange = (index: number, isValid: boolean) => {
+    setValidInputs((prev) => {
+      const updated = [...prev];
+      updated[index] = isValid;
+      return updated;
+    });
+  };
+
+  const isFormValid = validInputs.every(Boolean);
+
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Première étape</CardTitle>
-        <CardDescription>
-          Voici la description de la première étape.
-        </CardDescription>
+        <CardTitle>{title}</CardTitle>
+        <CardDescription>{description}</CardDescription>
       </CardHeader>
       <CardContent className="flex flex-col gap-8">
-        <FormFieldInput
-          setIsCorrect={setIsInput1Correct}
-          label={`Quel est le nom de l'attaquant ?`}
-          validResponses={["tom", "tom fraize"]}
-          description={`Plus d'informations sur cette question.`}
-        />
-        <FormFieldInput
-          setIsCorrect={setIsInput2Correct}
-          label={`Quel est l'âge de l'attaquant' ?`}
-          validResponses={["tom", "tom fraize"]}
-        />
+        {inputs.map((input, index) => (
+          <FormFieldInput
+            key={index}
+            setIsCorrect={() => handleValidationChange(index, true)}
+            {...input}
+          />
+        ))}
       </CardContent>
-      <CardFooter className="flex">
-        <Button
-          className="w-full"
-          disabled={!isInput1Correct || !isInput2Correct}
-        >
+      <CardFooter>
+        <Button className="w-full" disabled={!isFormValid}>
           {`Passer à l'étape suivante`}
         </Button>
       </CardFooter>

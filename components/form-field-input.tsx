@@ -18,7 +18,7 @@ import { z } from "zod";
 import { CheckIcon } from "lucide-react";
 import { Dispatch, SetStateAction } from "react";
 
-type Props = {
+export type FormFieldInputProps = {
   setIsCorrect: Dispatch<SetStateAction<boolean>>;
   validResponses: string[];
   label: string;
@@ -30,7 +30,7 @@ const FormFieldInput = ({
   label,
   validResponses,
   description,
-}: Props) => {
+}: FormFieldInputProps) => {
   const formSchema = z.object({
     input: z
       .string()
