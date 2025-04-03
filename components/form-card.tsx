@@ -16,13 +16,22 @@ type InputProps = Pick<
   "validResponses" | "label" | "description"
 >;
 
-interface FormCardProps {
+export interface FormCardProps {
   title: string;
   description: string;
   inputs: InputProps[];
 }
 
-const FormCard: React.FC<FormCardProps> = ({ inputs, title, description }) => {
+type Props = FormCardProps & {
+  handleNextStep: () => void;
+};
+
+const FormCard: React.FC<Props> = ({
+  inputs,
+  title,
+  description,
+  handleNextStep,
+}) => {
   const [validInputs, setValidInputs] = useState<boolean[]>(
     Array(inputs.length).fill(false)
   );
@@ -53,7 +62,11 @@ const FormCard: React.FC<FormCardProps> = ({ inputs, title, description }) => {
         ))}
       </CardContent>
       <CardFooter>
-        <Button className="w-full" disabled={!isFormValid}>
+        <Button
+          className="w-full"
+          disabled={!isFormValid}
+          onClick={handleNextStep}
+        >
           {`Passer à l'étape suivante`}
         </Button>
       </CardFooter>

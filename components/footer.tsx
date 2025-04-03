@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center bg-white">
       <a
         className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-        href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+        href="https://troubled-trollius-231.notion.site/Protection-num-rique-1c7ae4a6665e801fa652f71ab2b1fbc6"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -16,7 +16,7 @@ export default function Footer() {
           width={16}
           height={16}
         />
-        Learn
+        Apprendre
       </a>
       <a
         className="flex items-center gap-2 hover:underline hover:underline-offset-4"
