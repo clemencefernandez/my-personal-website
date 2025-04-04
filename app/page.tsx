@@ -13,6 +13,7 @@ const PageContent = () => {
     <FormCard
       key={step}
       submitButtonProps={{
+        className: step === 0 ? "hidden" : "w-full",
         onClick: step === steps.length - 1 ? handleReset : goToNextStep,
         children: step === steps.length - 1 ? "Recommencer" : "Suivant",
       }}

@@ -14,12 +14,17 @@ type GameContextType = {
   step: (typeof stepNumberArray)[number];
   goToNextStep: React.ButtonHTMLAttributes<HTMLButtonElement>["onClick"];
   handleReset: React.ButtonHTMLAttributes<HTMLButtonElement>["onClick"];
+  userName: string;
+  startGame: (name: string) => void;
+  startTime: number | null;
 };
 
 const GameContext = createContext<GameContextType | undefined>(undefined);
 
 export const GameProvider: React.FC<PropsWithChildren> = ({ children }) => {
   const [step, setStep] = useState<number>(stepNumberArray[0]);
+  const [userName, setUserName] = useState("Pas de nom");
+  const [startTime, setStartTime] = useState<number | null>(null);
 
   // Load the step from localStorage when the component mounts
   // Avoid error "window is undefined" in SSR
@@ -48,8 +53,23 @@ export const GameProvider: React.FC<PropsWithChildren> = ({ children }) => {
     window.location.reload();
   };
 
+  const startGame = (name: string) => {
+    setUserName(name);
+    setStartTime(Date.now());
+    goToNextStep();
+  };
+
   return (
-    <GameContext.Provider value={{ step, goToNextStep, handleReset }}>
+    <GameContext.Provider
+      value={{
+        step,
+        goToNextStep,
+        handleReset,
+        userName,
+        startGame,
+        startTime,
+      }}
+    >
       {children}
     </GameContext.Provider>
   );

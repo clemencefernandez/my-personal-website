@@ -1,10 +1,12 @@
+import EndContent from "@/components/end-content";
+import { StartContent } from "@/components/start-content";
 import { Step } from "@/type/step";
 
 export const steps: Step[] = [
   {
     title: "Bienvenue",
     subtitle: "Bienvenue dans le formulaire.",
-    content: "ceci est du contenu",
+    content: <StartContent />,
   },
   {
     title: "Première étape",
@@ -36,6 +38,6 @@ export const steps: Step[] = [
   {
     title: "Fin.",
     subtitle: "so whaaaat.",
-    content: "Bravo ! Vous avez terminé le jeu.",
+    content: <EndContent />,
   },
 ];

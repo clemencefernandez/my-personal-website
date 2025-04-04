@@ -16,7 +16,7 @@ import { Step } from "@/type/step";
 type Props = Step & {
   submitButtonProps: Pick<
     React.ComponentProps<"button">,
-    "onClick" | "children"
+    "onClick" | "children" | "className"
   >;
 };
 
@@ -57,11 +57,7 @@ const FormCard: React.FC<Props> = ({
         )}
       </CardContent>
       <CardFooter>
-        <Button
-          className="w-full"
-          disabled={!isFormValid}
-          {...submitButtonProps}
-        />
+        <Button disabled={!isFormValid} {...submitButtonProps} />
       </CardFooter>
     </Card>
   );
