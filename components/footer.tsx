@@ -2,18 +2,10 @@
 import Image from "next/image";
 import { Button } from "./ui/button";
 import { RotateCcw } from "lucide-react";
-
-function resetStepInLocalStorage() {
-  // Remettre à zéro l'étape dans le localStorage
-  localStorage.setItem("step", "0");
-  // Ici, tu peux aussi effectuer toute autre réinitialisation si nécessaire
-}
+import { useGame } from "@/context/game-context";
 
 export default function Footer() {
-  const handleReset = () => {
-    resetStepInLocalStorage();
-    window.location.reload();
-  };
+  const { handleReset } = useGame();
 
   return (
     <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center bg-white">

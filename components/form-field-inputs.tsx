@@ -1,8 +1,8 @@
-import { FormCardProps } from "./form-card";
+import { Input } from "@/type/step";
 import FormFieldInput from "./form-field-input";
 
 type Props = {
-  inputs: NonNullable<FormCardProps["inputs"]>;
+  inputs: Input[];
   handleValidationChange: (index: number, correct: boolean) => void;
 };
 const FormFieldInputs = ({ inputs, handleValidationChange }: Props) => {

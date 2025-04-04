@@ -9,29 +9,23 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { FormFieldInputProps } from "./form-field-input";
+
 import FormFieldInputs from "./form-field-inputs";
+import { Step } from "@/type/step";
 
-type InputProps = Pick<
-  FormFieldInputProps,
-  "validResponses" | "label" | "description"
->;
-
-export interface FormCardProps {
-  title: string;
-  description: string;
-  inputs?: InputProps[];
-}
-
-type Props = FormCardProps & {
-  handleNextStep: () => void;
+type Props = Step & {
+  submitButtonProps: Pick<
+    React.ComponentProps<"button">,
+    "onClick" | "children"
+  >;
 };
 
 const FormCard: React.FC<Props> = ({
+  content,
+  subtitle,
   inputs,
   title,
-  description,
-  handleNextStep,
+  submitButtonProps,
 }) => {
   const [validInputs, setValidInputs] = useState<boolean[]>(
     inputs ? Array(inputs.length).fill(false) : [true]
@@ -51,10 +45,10 @@ const FormCard: React.FC<Props> = ({
     <Card>
       <CardHeader>
         <CardTitle>{title}</CardTitle>
-        <CardDescription>{description}</CardDescription>
+        <CardDescription>{subtitle}</CardDescription>
       </CardHeader>
       <CardContent>
-        <div>Bienvenue</div>
+        {content && content}
         {inputs && (
           <FormFieldInputs
             inputs={inputs}
@@ -66,10 +60,8 @@ const FormCard: React.FC<Props> = ({
         <Button
           className="w-full"
           disabled={!isFormValid}
-          onClick={handleNextStep}
-        >
-          {`Passer à l'étape suivante`}
-        </Button>
+          {...submitButtonProps}
+        />
       </CardFooter>
     </Card>
   );
