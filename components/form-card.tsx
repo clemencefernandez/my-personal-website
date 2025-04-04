@@ -9,7 +9,8 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import FormFieldInput, { FormFieldInputProps } from "./form-field-input";
+import { FormFieldInputProps } from "./form-field-input";
+import FormFieldInputs from "./form-field-inputs";
 
 type InputProps = Pick<
   FormFieldInputProps,
@@ -19,7 +20,7 @@ type InputProps = Pick<
 export interface FormCardProps {
   title: string;
   description: string;
-  inputs: InputProps[];
+  inputs?: InputProps[];
 }
 
 type Props = FormCardProps & {
@@ -33,7 +34,7 @@ const FormCard: React.FC<Props> = ({
   handleNextStep,
 }) => {
   const [validInputs, setValidInputs] = useState<boolean[]>(
-    Array(inputs.length).fill(false)
+    inputs ? Array(inputs.length).fill(false) : [true]
   );
 
   const handleValidationChange = (index: number, isValid: boolean) => {
@@ -52,14 +53,14 @@ const FormCard: React.FC<Props> = ({
         <CardTitle>{title}</CardTitle>
         <CardDescription>{description}</CardDescription>
       </CardHeader>
-      <CardContent className="flex flex-col gap-8">
-        {inputs.map((input, index) => (
-          <FormFieldInput
-            key={index}
-            setIsCorrect={() => handleValidationChange(index, true)}
-            {...input}
+      <CardContent>
+        <div>Bienvenue</div>
+        {inputs && (
+          <FormFieldInputs
+            inputs={inputs}
+            handleValidationChange={handleValidationChange}
           />
-        ))}
+        )}
       </CardContent>
       <CardFooter>
         <Button

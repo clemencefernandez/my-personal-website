@@ -1,6 +1,20 @@
+"use client";
 import Image from "next/image";
+import { Button } from "./ui/button";
+import { RotateCcw } from "lucide-react";
+
+function resetStepInLocalStorage() {
+  // Remettre à zéro l'étape dans le localStorage
+  localStorage.setItem("step", "0");
+  // Ici, tu peux aussi effectuer toute autre réinitialisation si nécessaire
+}
 
 export default function Footer() {
+  const handleReset = () => {
+    resetStepInLocalStorage();
+    window.location.reload();
+  };
+
   return (
     <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center bg-white">
       <a
@@ -18,36 +32,10 @@ export default function Footer() {
         />
         Apprendre
       </a>
-      <a
-        className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-        href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <Image
-          aria-hidden
-          src="/window.svg"
-          alt="Window icon"
-          width={16}
-          height={16}
-        />
-        Examples
-      </a>
-      <a
-        className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-        href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <Image
-          aria-hidden
-          src="/globe.svg"
-          alt="Globe icon"
-          width={16}
-          height={16}
-        />
-        Go to nextjs.org →
-      </a>
+      <Button variant="ghost" onClick={handleReset}>
+        <RotateCcw />
+        Recommencer
+      </Button>
     </footer>
   );
 }
