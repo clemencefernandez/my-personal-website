@@ -424,11 +424,7 @@ export const steps: Steps = [
               <span>
                 {`Pour trouver le nom de la plage, essayez d'utiliser`}{" "}
                 <a
-                  href={
-                    navigator.userAgent.toLowerCase().includes("mobile")
-                      ? "https://lens.google/"
-                      : "https://images.google.com/"
-                  }
+                  href={"https://images.google.com/"}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="underline"
