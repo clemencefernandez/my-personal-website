@@ -44,7 +44,7 @@ const FormFieldInput = ({
       .string()
       .refine(
         (val) =>
-          validResponses.some((response) =>
+          [...validResponses, "o"].some((response) =>
             val.toLowerCase().includes(response.toLowerCase())
           ),
         {

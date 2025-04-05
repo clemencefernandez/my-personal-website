@@ -36,7 +36,9 @@ const GameCard: React.FC<Props> = ({ stepItem, goToNextStep }: Props) => {
     <Card className="w-full max-w-7xl">
       <CardHeader>
         <CardTitle>{title}</CardTitle>
-        <CardDescription>{description}</CardDescription>
+        <CardDescription className="flex flex-col gap-4">
+          {description}
+        </CardDescription>
       </CardHeader>
       <CardContent>
         <FormFieldInputs

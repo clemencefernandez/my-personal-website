@@ -330,6 +330,133 @@ export const steps: Steps = [
     ],
   },
   {
+    title: "Étape 5 : Trouver le compte Insta",
+    description: (
+      <>
+        <span>
+          {`Les données de ce site ont fuité et ont été récupérées par des hackers. Ces infos peuvent être utilisées pour des attaques. `}
+        </span>
+        <span>
+          {`Pas de mots de passe dans cette fuite, mais vous avez trouvé son numéro de téléphone et son email, qui sont partout sur Internet. Vous avez même repéré qu'il est inscrit à LaBanqueBasqueDuCoin.`}
+        </span>
+        <span>
+          {`Il vous manque maintenant une pièce essentielle : son mot de passe. Heureusement, beaucoup de gens utilisent le même mot de passe partout, souvent lié à des infos personnelles.`}
+        </span>
+        <span>
+          {`Peut-être que son compte Instagram pourrait nous donner un indice supplémentaire ?`}
+        </span>
+      </>
+    ),
+    inputs: [
+      {
+        label: "Quel est le compte Instagram de Tom ?",
+        validResponses: [
+          "@tom_fraize",
+          "instagram.com/tom_fraize",
+          "tom_fraize",
+        ],
+        description: "Quel est le nom d'utilisateur de Tom sur Instagram ?",
+        hint: {
+          title: "Besoin d'un coup de pouce ?",
+          description: (
+            <>
+              <span>
+                {`Souvenez-vous de l’indice laissé dans la bio de Tom sur son compte Twitch. Il mentionnait un lien vers son Instagram.`}
+              </span>
+              <br />
+              <span>
+                {`Regardez de près, vous trouverez peut-être une information personnelle dans sa bio Instagram qui vous aidera à trouver son mot de passe !`}
+              </span>
+            </>
+          ),
+        },
+      },
+    ],
+  },
+  {
+    title: "Étape 5 : On en apprend encore plus sur Tom...",
+    description: (
+      <>
+        <span>
+          {`Tom nous a fait la gentillesse de rendre son profil public.  Nous pouvons maintenant avoir accès à des informations personnelles intéressantes.`}
+        </span>
+        <span>
+          {`Sur son Instagram, Tom a posté `}
+          <Link
+            href="/image_insta.jpg"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            une photo
+          </Link>{" "}
+          où il est en train de profiter du soleil. Regardez bien cette photo :
+          elle pourrait nous donner un indice important pour découvrir où il se
+          trouve.
+        </span>
+        <span>
+          {`En utilisant des outils comme Google Lens, vous pouvez obtenir des informations précieuses sur cette image, y compris le nom de la plage où la photo a été prise.`}
+        </span>
+      </>
+    ),
+    inputs: [
+      {
+        label: "Donner l'une des passions de Tom.",
+        validResponses: ["moto et surf", "moto", "surf", "ride"],
+        description: "Cherchez un indice sur ses passions dans son profil.",
+      },
+      {
+        label: "Quel est le nom de la plage de la photo de Tom ?",
+        validResponses: [
+          "plage de marinella",
+          "marinella",
+          "plage marinella",
+          "plage de la marinella",
+          "la marinella",
+          "la plage de marinella",
+          "marinela",
+        ],
+        description:
+          "Utilisez Google Lens pour trouver le nom de la plage dans la photo de Tom.",
+        hint: {
+          title: "Besoin d'un coup de pouce ?",
+          description: (
+            <>
+              <span>
+                {`Pour trouver le nom de la plage, essayez d'utiliser`}{" "}
+                <a
+                  href={
+                    navigator.userAgent.toLowerCase().includes("mobile")
+                      ? "https://lens.google/"
+                      : "https://images.google.com/"
+                  }
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline"
+                >
+                  Google Lens
+                </a>{" "}
+                pour analyser la photo.
+              </span>
+
+              <span>
+                {`Consultez aussi le livret d'enquête pour plus d'infos sur cet
+                outil :`}{" "}
+                <a
+                  href="https://troubled-trollius-231.notion.site/Retrouver-un-endroit-avec-Google-Lens-1ccae4a6665e8007b20cd7d21ef967ff"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline"
+                >
+                  Ouvrir le livret
+                </a>
+              </span>
+            </>
+          ),
+        },
+      },
+    ],
+  },
+  {
     title: "Fin.",
     description: "so whaaaat.",
   },
