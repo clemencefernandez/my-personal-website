@@ -101,8 +101,17 @@ export const steps: Steps = [
     ),
     inputs: [
       {
-        label: "Sur quel réseau social retrouve-t-on ce pseudo ?",
-        validResponses: ["twitch"],
+        label: "De quel réseau social s'agit-il ?",
+        responseFormat: "Format de réponse : ******",
+        validResponses: [
+          "twitch",
+          "twich",
+          "twitch.tv",
+          "https://twitch.tv",
+          "https://twitch.tv/",
+          "http://twitch.tv",
+          "http://twitch.tv/",
+        ],
         description:
           "Retrouve le nom du réseau social où l'attaquant a laissé son pseudo.",
         hint: {
@@ -118,22 +127,43 @@ export const steps: Steps = [
           ),
         },
       },
+    ],
+  },
+  {
+    title: "Étape 3 : Explorer le profil de Tom",
+    description: (
+      <>
+        <span>
+          {`Vous avez trouvé le pseudo de Tom sur Twitch. Maintenant, il est temps
+          d'explorer son profil pour en apprendre davantage sur lui.`}
+        </span>
+        <span>
+          {`Il est fort probable que des informations comme son nom de famille et
+          son adresse email soient disponibles dans ses détails de profil.`}
+        </span>
+        <span>
+          {`Cherchez les bonnes informations et complète les champs ci-dessous
+          pour avancer dans l'enquête.`}
+        </span>
+      </>
+    ),
+    inputs: [
       {
         label: "Quel est l'URL du profil de l'attaquant ?",
-        validResponses: ["twitch.tv/frz_tom64"],
-        responseFormat: "https://site.tv/[pseudo] ou https://site.tv/[pseudo]/",
+        validResponses: [
+          "https://twitch.tv/frz_tom64/",
+          "twitch.tv/frz_tom64",
+          "https://twitch.tv/frz_tom64",
+          "http://twitch.tv/frz_tom64/",
+          "http://twitch.tv/frz_tom64",
+          "twitch.tv/frz_tom64/",
+        ],
+        responseFormat: "Format de réponse : https://******.**/*********/",
         description:
-          "Copie colle l'URL du profil de l'attaquant en utilisant le pseudo trouvé dans l'image précédente.",
+          "Les urls sur twitch sont de la forme twitch.tv/ton_pseudo. Trouvez l'url du profil de Tom.",
         hint: {
           description: (
             <>
-              <span>
-                {`Si tu n'arrives pas à trouver le profil via la recherche, essaye
-                d'entrer l'adresse sous cette forme :`}{" "}
-                <strong>site.tv/[pseudo]</strong>.{" "}
-                {`Ça devrait t'orienter
-                directement vers son profil.`}
-              </span>
               <span>
                 {`Une URL (Uniform Resource Locator) est l'adresse web qui te
                 permet d’accéder à une page précise sur Internet. C’est comme
