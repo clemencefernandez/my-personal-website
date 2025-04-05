@@ -25,6 +25,7 @@ export default function Footer() {
         src="/QRCodeProtectionNumerique.svg"
         alt="QR code vers le livret d'aide"
         width={120}
+        className="hidden md:block"
         height={120}
       />
       {/* Bouton pour recommencer */}

@@ -50,7 +50,7 @@ const GameCard: React.FC<Props> = ({ stepItem, goToNextStep, step }: Props) => {
         <Button
           disabled={!isFormValid}
           onClick={goToNextStep}
-          className="ml-auto"
+          className="ml-auto w-full md:w-min"
         >{`Passer à l'étape suivante`}</Button>
       </CardFooter>
     </Card>

@@ -76,13 +76,13 @@ const FormFieldInput = ({
             <FormItem>
               <FormLabel>{label}</FormLabel>
               <FormControl>
-                <div className="flex gap-2 items-center">
+                <div className="flex flex-col md:flex-row gap-2 items-center">
                   <Input
                     autoComplete="off"
                     placeholder={responseFormat ?? "Format de réponse : ****"}
                     {...field}
                     disabled={!!isSubmitSuccessful}
-                    className={`transition-all duration-300 ${
+                    className={`transition-allduration-300${
                       isSubmitSuccessful
                         ? "border-green-500 text-green-700"
                         : ""
