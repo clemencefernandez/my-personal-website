@@ -503,11 +503,11 @@ export const steps: Steps = [
       {
         label: "Quel est le mot de passe de Tom Fraize ?",
         validResponses: [
+          "2010boaclemence",
           "boaclemence2010",
           "2009boaclemence",
           "boaclemence2009",
           "2010boaclemence",
-          "2011boaclemence",
           "boaclemence2011",
         ],
         responseFormat: "20*************",
