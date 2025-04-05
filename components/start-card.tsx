@@ -24,7 +24,6 @@ import {
   CardHeader,
   CardTitle,
 } from "./ui/card";
-import { steps } from "@/data/steps";
 
 const FormSchema = z.object({
   username: z.string().min(2, {
@@ -32,11 +31,10 @@ const FormSchema = z.object({
   }),
 });
 
-const title = steps[0].title;
-const description = steps[0].description;
 type Props = {
   goToNextStep: () => void;
 };
+
 export function StartCard({ goToNextStep }: Props) {
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
@@ -52,10 +50,28 @@ export function StartCard({ goToNextStep }: Props) {
   }
 
   return (
-    <Card>
+    <Card className="w-full max-w-5xl">
       <CardHeader>
-        <CardTitle>{title}</CardTitle>
-        <CardDescription>{description}</CardDescription>
+        <CardTitle>
+          Bienvenue, chers spécialistes de l'OSINT en herbe !
+        </CardTitle>
+        <CardDescription className="space-y-3 flex flex-col gap-4">
+          <span>
+            {`Tisse Ta Toile a été piraté par un cybercriminel. L'attaquant pense
+            s'en être tirer sans encombre. Mais qui est-il vraiment ?`}
+          </span>
+          <span>
+            Votre mission : <strong>mener l’enquête</strong> à travers internet,
+            déjouer les pièges, trouver ses données personnelles.
+          </span>
+          <span>
+            Vous allez plonger dans le monde de la cybersécurité et du hacking…
+            Mais n’oubliez pas : vous êtes des hackers <em>éthiques</em> 🧠💻
+          </span>
+          <span>
+            Formez votre équipe, choisissez un nom, et que l’enquête commence !
+          </span>
+        </CardDescription>
       </CardHeader>
 
       <Form {...form}>
@@ -66,15 +82,15 @@ export function StartCard({ goToNextStep }: Props) {
               name="username"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Nom du joueur</FormLabel>
+                  <FormLabel>{`Nom de l'équipe`}</FormLabel>
                   <FormControl>
                     <Input
-                      placeholder="Ton nom ou celui de ton équipe"
+                      placeholder="Ton nom d'équipe (le nom le plus drôle gagne des points !)"
                       {...field}
                     />
                   </FormControl>
                   <FormDescription>
-                    Ce nom sera utilisé pour le classement.
+                    Ce nom s’affichera dans le score final.
                   </FormDescription>
                   <FormMessage />
                 </FormItem>
@@ -82,8 +98,8 @@ export function StartCard({ goToNextStep }: Props) {
             />
           </CardContent>
           <CardFooter>
-            <Button className="w-full" type="submit">
-              Prêt à jouer ? GO !
+            <Button className="w-full mt-5" type="submit">
+              🚀 Prêts ? C’est parti !
             </Button>
           </CardFooter>
         </form>
