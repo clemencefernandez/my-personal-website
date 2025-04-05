@@ -26,32 +26,32 @@ const EndCard = ({ handleRestart }: Props) => {
     <Card className="w-full max-w-7xl">
       <CardHeader>
         <CardTitle>🎉 Mission accomplie !</CardTitle>
-        <CardDescription className="space-y-2 mt-2">
-          <p>
-            🎯 Bravo équipe <strong>{userName}</strong> ! Grâce à votre
+        <CardDescription className="space-y-2 flex flex-col gap-4">
+          <span>
+            Bien joué équipe <strong>{userName}</strong> ! Grâce à votre
             persévérance, vous avez réussi à{" "}
             <strong>craquer le mot de passe</strong> de TomFraize et à accéder à
             ses <strong>coordonnées bancaires</strong>. Vous avez le combo
             parfait : numéro de téléphone + mot de passe personnel !
-          </p>
-          <p>
-            🙌 Mais comme vous êtes <strong>véritable hacker éthique</strong>,
-            vous n’en ferez <strong>évidemment rien</strong>. vous savez que le
-            but, c’est d’apprendre, pas de nuire 💡
-          </p>
-          <p>
-            🧠 Vous venez de comprendre comment des données peuvent être
+          </span>
+          <span>
+            Mais comme vous êtes <strong>véritable hacker éthique</strong>, vous
+            n’en ferez <strong>évidemment rien</strong>. vous savez que le but,
+            c’est d’apprendre, pas de nuire 💡
+          </span>
+          <span>
+            Vous venez de comprendre comment des données peuvent être
             utilisées... et vous avez relevé l’enquête avec brio !
-          </p>
-          <p>
+          </span>
+          <span>
             ⏱️ Temps réalisé : <strong>{formattedTime}</strong>
-          </p>
-          <p>
-            👉 Tu veux donner ton avis ? Écris à{" "}
+          </span>
+          <span>
+            Tu veux donner ton avis sur ce jeu ? Écris à{" "}
             <a href="mailto:clemencefrz@gmail.com">clemencefrz@gmail.com</a> ou
             envoie un DM à <strong>@tom_fraize</strong> sur Insta 😉
-          </p>
-          <p>
+          </span>
+          <span>
             📚 Pour revoir tous les outils utilisés et les bonnes pratiques :{" "}
             <a
               href="https://troubled-trollius-231.notion.site/Protection-num-rique-1c7ae4a6665e801fa652f71ab2b1fbc6"
@@ -61,7 +61,7 @@ const EndCard = ({ handleRestart }: Props) => {
               consulte le livret d’enquête ici
             </a>
             .
-          </p>
+          </span>
         </CardDescription>
       </CardHeader>
 

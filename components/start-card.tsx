@@ -58,15 +58,22 @@ export function StartCard({ goToNextStep }: Props) {
         <CardDescription className="space-y-3 flex flex-col gap-4">
           <span>
             {`Tisse Ta Toile a été piraté par un cybercriminel. L'attaquant pense
-            s'en être tirer sans encombre. Mais qui est-il vraiment ?`}
+            s'en être tirer sans encombre. Mais qu'en est-il vraiment ?`}
           </span>
           <span>
             Votre mission : <strong>mener l’enquête</strong> à travers internet,
-            déjouer les pièges, trouver ses données personnelles.
+            déjouer les pièges et trouver ses données personnelles.
           </span>
           <span>
-            {`Vous allez plonger dans le monde de la cybersécurité et du hacking…
-            Mais n’oubliez pas : vous êtes des hackers éthiques 🧠💻.`}
+            Vous allez plonger dans le monde de{" "}
+            <a
+              href="https://www.cnil.fr/fr/recoupement-dinformations-en-ligne-ce-que-vous-publiez-peut-devoiler-votre-vie-privee"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline underline-offset-4 hover:text-primary transition-colors"
+            >{`l'OSINT…`}</a>
+            {". "}
+            Mais n’oubliez pas : vous êtes des hackers éthiques 🧠💻.
           </span>
           <span>
             Formez votre équipe, choisissez un nom, et que l’enquête commence !

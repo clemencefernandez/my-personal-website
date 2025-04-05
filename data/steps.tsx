@@ -47,27 +47,24 @@ export const steps: Steps = [
           description: (
             <>
               <span>
-                Pour retrouver le pseudo de l’attaquant, observe attentivement
-                l’image qu’il a laissée derrière lui.
+                {`Cela ne sert à rien de regarder la photo pendant 1000 ans... la réponse n'est pas SUR la photo mais DANS la photo.`}
               </span>
-              <br />
               <span>
                 Un indice pourrait bien se cacher dans ses métadonnées… rien
                 n’est laissé au hasard.
               </span>
-              <br />
               <span>
-                Télécharge l’image et consulte le livret d’enquête pour t’aider
-                dans ta fouille&nbsp;:{" "}
-                <a
-                  href="https://troubled-trollius-231.notion.site/Les-m-tadonn-es-1ccae4a6665e8013a00aff9982cd4aa4"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="underline underline-offset-4 hover:text-primary transition-colors"
-                >
-                  Ouvrir le livret
-                </a>
+                {`Télécharge la photo (en faisant un "clic-droit" puis en cliquant sur "Enregistrer l'image") et consulte le livret d’enquête pour t’aider
+                dans ta fouille :`}{" "}
               </span>
+              <a
+                href="https://troubled-trollius-231.notion.site/Les-m-tadonn-es-1ccae4a6665e8013a00aff9982cd4aa4"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline underline-offset-4 hover:text-primary transition-colors"
+              >
+                Ouvrir le livret
+              </a>
             </>
           ),
         },
@@ -258,6 +255,28 @@ export const steps: Steps = [
           ),
         },
       },
+      {
+        label: "Quel est le compte Instagram de Tom ?",
+        validResponses: [
+          "@tom_fraize",
+          "instagram.com/tom_fraize",
+          "tom_fraize",
+        ],
+        description: "Quel est le nom d'utilisateur de Tom sur Instagram ?",
+        hint: {
+          title: "Besoin d'un coup de pouce ?",
+          description: (
+            <>
+              <span>
+                {`Souvenez-vous de l’indice laissé dans la bio de Tom sur son compte Twitch. Il mentionnait un lien vers son Instagram.`}
+              </span>
+              <span>
+                {`Regardez de près, vous trouverez peut-être une information personnelle dans sa bio Instagram qui vous aidera à trouver son mot de passe !`}
+              </span>
+            </>
+          ),
+        },
+      },
     ],
   },
   {
@@ -366,51 +385,7 @@ export const steps: Steps = [
     ],
   },
   {
-    title: "Étape 5 : Trouver le compte Insta",
-    description: (
-      <>
-        <span>
-          {`Les données de ce site ont fuité et ont été récupérées par des hackers. Ces infos peuvent être utilisées pour des attaques. `}
-        </span>
-        <span>
-          {`Pas de mots de passe dans cette fuite, mais vous avez trouvé son numéro de téléphone et son email, qui sont partout sur Internet. Vous avez même repéré qu'il est inscrit à LaBanqueBasqueDuCoin.`}
-        </span>
-        <span>
-          {`Il vous manque maintenant une pièce essentielle : son mot de passe. Heureusement, beaucoup de gens utilisent le même mot de passe partout, souvent lié à des infos personnelles.`}
-        </span>
-        <span>
-          {`Peut-être que son compte Instagram pourrait nous donner un indice supplémentaire ?`}
-        </span>
-      </>
-    ),
-    inputs: [
-      {
-        label: "Quel est le compte Instagram de Tom ?",
-        validResponses: [
-          "@tom_fraize",
-          "instagram.com/tom_fraize",
-          "tom_fraize",
-        ],
-        description: "Quel est le nom d'utilisateur de Tom sur Instagram ?",
-        hint: {
-          title: "Besoin d'un coup de pouce ?",
-          description: (
-            <>
-              <span>
-                {`Souvenez-vous de l’indice laissé dans la bio de Tom sur son compte Twitch. Il mentionnait un lien vers son Instagram.`}
-              </span>
-              <br />
-              <span>
-                {`Regardez de près, vous trouverez peut-être une information personnelle dans sa bio Instagram qui vous aidera à trouver son mot de passe !`}
-              </span>
-            </>
-          ),
-        },
-      },
-    ],
-  },
-  {
-    title: "Étape 5 : On en apprend encore plus sur Tom...",
+    title: "On en apprend encore plus sur Tom... avec Instagram",
     description: (
       <>
         <span>
@@ -430,7 +405,7 @@ export const steps: Steps = [
           trouve.
         </span>
         <span>
-          {`En utilisant des outils comme Google Lens, vous pouvez obtenir des informations précieuses sur cette image, y compris le nom de la plage où la photo a été prise.`}
+          {`En utilisant des outils comme Google Lens, vous pouvez obtenir des informations précieuses sur cette image, y compris le nom de l'endroit où la photo a été prise.`}
         </span>
       </>
     ),
@@ -446,6 +421,8 @@ export const steps: Steps = [
           "jeux vidéos",
           "jeux videos",
           "jeu video",
+          "jeuvidéo",
+          "jeuvideo",
           "jeu vidéo",
           "streaming",
           "fifa",
@@ -456,7 +433,7 @@ export const steps: Steps = [
           "Cherchez un indice sur ses passions dans ses différents réseaux.",
       },
       {
-        label: "Quel est le nom de la plage de la photo de Tom ?",
+        label: "Quel est le nom du lieu de la photo de Tom ?",
         validResponses: [
           "plage de marinella",
           "marinella",
@@ -465,9 +442,13 @@ export const steps: Steps = [
           "la marinella",
           "la plage de marinella",
           "marinela",
+          "plage de marinela",
+          "la plage marinela",
+          "plagemarinella",
+          "plagemarinela",
         ],
         description:
-          "Utilisez Google Lens pour trouver le nom de la plage dans la photo de Tom.",
+          "Utilisez Google Lens pour trouver le l'endroit dans la photo de Tom.",
         hint: {
           title: "Besoin d'un coup de pouce ?",
           description: (
@@ -508,7 +489,7 @@ export const steps: Steps = [
     description: (
       <>
         <span>
-          {`Grâce aux indices que vous avez collectés jusqu'à présent, vous avez peut-être une chance de deviner le mot de passe de TomFraize. En effet, une grande partie des mots de passe sont souvent basés sur des informations personnelles simples.`}
+          {`Grâce aux indices que vous avez collectés jusqu'à présent, vous avez peut-être une chance de deviner le mot de passe de Tom Fraize. En effet, une grande partie des mots de passe sont souvent basés sur des informations personnelles simples.`}
         </span>
         <span>
           {`Vous savez que son chat s'appelle "Boa" grâce à son Instagram, et que "Clémence" semble être une personne proche de lui, peut-être même de sa famille, puisqu’il utilise son adresse email pour s’inscrire sur divers sites.`}
@@ -520,7 +501,7 @@ export const steps: Steps = [
     ),
     inputs: [
       {
-        label: "Quel est le mot de passe de TomFraize ?",
+        label: "Quel est le mot de passe de Tom Fraize ?",
         validResponses: ["boaclemence2010", "boaclemence2009"],
         description:
           "Tentez de deviner le mot de passe basé sur les informations personnelles de Tom.",
@@ -531,7 +512,6 @@ export const steps: Steps = [
                 {`Pour trouver le mot de passe, souvenez-vous des indices : Tom a
                 un chat nommé "Boa" et utilise l'adresse email de Clémence.`}
               </span>
-              <br />
               <span>
                 Essayez une combinaison de ces informations simples avec des
                 chiffres, comme beaucoup de gens le font pour leurs mots de
