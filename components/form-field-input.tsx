@@ -84,6 +84,7 @@ const FormFieldInput = ({
               <FormControl>
                 <div className="flex gap-2 items-center">
                   <Input
+                    autoComplete="off"
                     placeholder={responseFormat ?? "Format de réponse : ****"}
                     {...field}
                     disabled={!!isSubmitSuccessful}
