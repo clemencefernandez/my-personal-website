@@ -142,15 +142,15 @@ export const steps: Steps = [
               <span>
                 Tu peux consulter le livret d’enquête pour t’aider dans ta
                 recherche&nbsp;:{" "}
-                <a
-                  href="https://troubled-trollius-231.notion.site/Les-URLS-1ccae4a6665e808d8c54df6a0aab6ae7"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="underline underline-offset-4 hover:text-primary transition-colors"
-                >
-                  Ouvrir le livret
-                </a>
               </span>
+              <a
+                href="https://troubled-trollius-231.notion.site/Les-URLS-1ccae4a6665e808d8c54df6a0aab6ae7"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline underline-offset-4 hover:text-primary transition-colors"
+              >
+                Ouvrir le livret
+              </a>
               <span>
                 {`Pour retrouver l'attaquant, tu dois comprendre comment
                 fonctionnent ces différentes parties. Parfois, il suffit juste

@@ -119,7 +119,7 @@ const FormFieldInput = ({
                           <DialogTitle>
                             {hint.title ?? "Besoin d'un coup de pouce ?"}
                           </DialogTitle>
-                          <DialogDescription className="space-y-2">
+                          <DialogDescription className="space-y-2 flex flex-col gap-4">
                             {hint.description}
                           </DialogDescription>
                         </DialogHeader>
