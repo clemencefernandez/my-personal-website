@@ -13,18 +13,14 @@ const stepNumberArray = Array.from({ length: steps.length }, (_, i) => i);
 type GameContextType = {
   step: (typeof stepNumberArray)[number];
   goToNextStep: React.ButtonHTMLAttributes<HTMLButtonElement>["onClick"];
-  handleReset: React.ButtonHTMLAttributes<HTMLButtonElement>["onClick"];
-  userName: string;
+  handleResetAndReload: React.ButtonHTMLAttributes<HTMLButtonElement>["onClick"];
   startGame: (name: string) => void;
-  startTime: number | null;
 };
 
 const GameContext = createContext<GameContextType | undefined>(undefined);
 
 export const GameProvider: React.FC<PropsWithChildren> = ({ children }) => {
   const [step, setStep] = useState<number>(stepNumberArray[0]);
-  const [userName, setUserName] = useState("Pas de nom");
-  const [startTime, setStartTime] = useState<number | null>(null);
 
   // Load the step from localStorage when the component mounts
   // Avoid error "window is undefined" in SSR
@@ -39,23 +35,29 @@ export const GameProvider: React.FC<PropsWithChildren> = ({ children }) => {
 
   const goToNextStep = useCallback(() => {
     const nextStep = step + 1;
-    console.log(steps);
     if (nextStep < steps.length) {
-      setStep(nextStep);
       window.localStorage.setItem("step", nextStep.toString());
+      setStep(nextStep);
+      return;
     } else {
-      console.log("Il n'y a pas d'étape suivante.");
+      return;
     }
   }, [step]);
 
   const handleReset = () => {
-    localStorage.setItem("step", "0");
+    window.localStorage.removeItem("step");
+    window.localStorage.removeItem("startTime");
+    window.localStorage.removeItem("userName");
+  };
+
+  const handleResetAndReload = () => {
+    handleReset();
     window.location.reload();
   };
 
   const startGame = (name: string) => {
-    setUserName(name);
-    setStartTime(Date.now());
+    window.localStorage.setItem("userName", name);
+    window.localStorage.setItem("startTime", Date.now().toString());
     goToNextStep();
   };
 
@@ -64,10 +66,8 @@ export const GameProvider: React.FC<PropsWithChildren> = ({ children }) => {
       value={{
         step,
         goToNextStep,
-        handleReset,
-        userName,
+        handleResetAndReload,
         startGame,
-        startTime,
       }}
     >
       {children}

@@ -7,14 +7,15 @@ import { GameProvider, useGame } from "@/context/game-context";
 import { steps } from "@/data/steps";
 
 const PageContent = () => {
-  const { step, goToNextStep, handleReset } = useGame();
+  const { step, goToNextStep, handleResetAndReload } = useGame();
 
   return (
     <FormCard
       key={step}
       submitButtonProps={{
         className: step === 0 ? "hidden" : "w-full",
-        onClick: step === steps.length - 1 ? handleReset : goToNextStep,
+        onClick:
+          step === steps.length - 1 ? handleResetAndReload : goToNextStep,
         children: step === steps.length - 1 ? "Recommencer" : "Suivant",
       }}
       {...steps[step]}

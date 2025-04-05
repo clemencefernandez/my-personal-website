@@ -5,7 +5,7 @@ import { RotateCcw } from "lucide-react";
 import { useGame } from "@/context/game-context";
 
 export default function Footer() {
-  const { handleReset } = useGame();
+  const { handleResetAndReload } = useGame();
 
   return (
     <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center bg-white">
@@ -24,7 +24,7 @@ export default function Footer() {
         />
         Apprendre
       </a>
-      <Button variant="ghost" onClick={handleReset}>
+      <Button variant="ghost" onClick={handleResetAndReload}>
         <RotateCcw />
         Recommencer
       </Button>
