@@ -1,11 +1,12 @@
 type Hint = {
-  title: string;
+  title?: string;
   description: React.ReactNode;
 };
 
 export type Input = {
   label: string;
   validResponses: string[];
+  responseFormat?: string;
   description?: string;
   hint?: Hint;
 };

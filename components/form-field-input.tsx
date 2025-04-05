@@ -37,13 +37,20 @@ const FormFieldInput = ({
   validResponses,
   description,
   hint,
+  responseFormat,
 }: FormFieldInputProps) => {
   const formSchema = z.object({
     input: z
       .string()
-      .refine((val) => validResponses.includes(val.toLowerCase()), {
-        message: "La réponse est incorrecte.",
-      }),
+      .refine(
+        (val) =>
+          validResponses.some((response) =>
+            val.toLowerCase().includes(response.toLowerCase())
+          ),
+        {
+          message: "La réponse est incorrecte.",
+        }
+      ),
   });
 
   const form = useForm<z.infer<typeof formSchema>>({
@@ -55,6 +62,8 @@ const FormFieldInput = ({
 
   const onSubmit = () => {
     setIsCorrect(true);
+    form.setValue("input", validResponses[0]);
+    console.log({ validResponses });
   };
 
   const isSubmitSuccessful = form.formState.isSubmitSuccessful;
@@ -75,7 +84,7 @@ const FormFieldInput = ({
               <FormControl>
                 <div className="flex gap-2 items-center">
                   <Input
-                    placeholder={"Format de réponse : ****"}
+                    placeholder={responseFormat ?? "Format de réponse : ****"}
                     {...field}
                     disabled={!!isSubmitSuccessful}
                     className={`transition-all duration-300 ${
@@ -106,7 +115,9 @@ const FormFieldInput = ({
                       </DialogTrigger>
                       <DialogContent>
                         <DialogHeader>
-                          <DialogTitle> {hint.title}</DialogTitle>
+                          <DialogTitle>
+                            {hint.title ?? "Besoin d'un coup de pouce ?"}
+                          </DialogTitle>
                           <DialogDescription className="space-y-2">
                             {hint.description}
                           </DialogDescription>

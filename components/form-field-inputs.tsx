@@ -7,7 +7,7 @@ type Props = {
 };
 const FormFieldInputs = ({ inputs, handleValidationChange }: Props) => {
   return (
-    <>
+    <div className="flex flex-col gap-8">
       {inputs.map((input, index) => (
         <FormFieldInput
           key={index}
@@ -15,7 +15,7 @@ const FormFieldInputs = ({ inputs, handleValidationChange }: Props) => {
           {...input}
         />
       ))}
-    </>
+    </div>
   );
 };
 
