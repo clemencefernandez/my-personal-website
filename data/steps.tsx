@@ -9,7 +9,7 @@ export const steps: Steps = [
       "Vous êtes des hackers d’élite 🎭. Votre objectif : infiltrer les réseaux et retrouver une information ultra-confidentielle sur un certain, OSINT",
   },
   {
-    title: "Étape 1 : Une image laissée par l'attaquant",
+    title: "Une image laissée par l'attaquant",
     description: (
       <>
         <span>
@@ -75,7 +75,7 @@ export const steps: Steps = [
     ],
   },
   {
-    title: "Étape 2 : Une erreur fatale du cybercriminel...",
+    title: "Une erreur fatale du cybercriminel...",
     description: (
       <>
         <span>
@@ -130,7 +130,7 @@ export const steps: Steps = [
     ],
   },
   {
-    title: "Étape 3 : Explorer le profil de Tom",
+    title: "Explorer le profil de Tom",
     description: (
       <>
         <span>
@@ -194,17 +194,25 @@ export const steps: Steps = [
     ],
   },
   {
-    title: "Étape 3 : Identifier Tom",
+    title: "Identifier Tom",
     description: (
       <div className="flex flex-col gap-4 text-justify">
         <span>
           {`Il semblerait que ce petit cybercriminel "Tom" soit un fan de gaming... Et il a l'air de laisser un peu trop d'infos sur lui sur ses réseaux. Profitons-en !`}
         </span>
         <span>
-          Vous allez devoir explorer son profil Twitch pour en apprendre
-          davantage sur lui. Il est fort probable que des informations comme son
-          nom de famille et son adresse email soient disponibles dans ses
-          détails de profil.
+          Vous allez devoir explorer son{" "}
+          <a
+            href="https://www.twitch.tv/frz_tom64/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline"
+          >
+            profil Twitch
+          </a>{" "}
+          pour en apprendre davantage sur lui. Il est fort probable que des
+          informations comme son nom de famille et son adresse email soient
+          disponibles dans ses détails de profil.
         </span>
         <span>
           {`Cherchez les bonnes informations et complète les champs ci-dessous
@@ -217,6 +225,7 @@ export const steps: Steps = [
         label: "Quel est le nom de famille de Tom ?",
         validResponses: ["fraize"],
         description: "Cherchez le nom de Tom sur son profil Twitch.",
+        responseFormat: "Format de réponse : ******",
         hint: {
           description: (
             <span>
@@ -229,6 +238,7 @@ export const steps: Steps = [
       {
         label: "Quel est l'email professionnel de Tom ?",
         validResponses: ["clemencefrz@gmail.com"],
+        responseFormat: "Format de réponse : ***********@*****.***",
         description:
           "L'adresse email peut être cachée dans les informations publiques de Tom sur Twitch.",
         hint: {
@@ -251,7 +261,7 @@ export const steps: Steps = [
     ],
   },
   {
-    title: "Étape 4 : Vérifier la fuite de données",
+    title: "Vérifier la fuite de données",
     description: (
       <div className="flex flex-col gap-4 text-justify">
         <span>
@@ -494,7 +504,7 @@ export const steps: Steps = [
     ],
   },
   {
-    title: "Étape 6 : Craquer le mot de passe de TomFraize",
+    title: "Craquer le mot de passe de Tom Fraize",
     description: (
       <>
         <span>

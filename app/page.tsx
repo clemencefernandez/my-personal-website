@@ -29,7 +29,12 @@ const PageContent = () => {
   }
 
   return (
-    <GameCard key={step} stepItem={stepItem} goToNextStep={goToNextStep} />
+    <GameCard
+      key={step}
+      stepItem={stepItem}
+      goToNextStep={goToNextStep}
+      step={step}
+    />
   );
 };
 

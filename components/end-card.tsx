@@ -48,7 +48,7 @@ const EndCard = ({ handleRestart }: Props) => {
           </p>
           <p>
             👉 Tu veux donner ton avis ? Écris à{" "}
-            <a href="mailto:cours.geroa@gmail.com">cours.geroa@gmail.com</a> ou
+            <a href="mailto:clemencefrz@gmail.com">clemencefrz@gmail.com</a> ou
             envoie un DM à <strong>@tom_fraize</strong> sur Insta 😉
           </p>
           <p>

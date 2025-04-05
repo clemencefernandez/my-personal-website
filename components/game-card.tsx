@@ -13,9 +13,9 @@ import {
 import FormFieldInputs from "./form-field-inputs";
 import { GamePage } from "@/types/model";
 
-type Props = { stepItem: GamePage; goToNextStep: () => void };
+type Props = { stepItem: GamePage; goToNextStep: () => void; step: number };
 
-const GameCard: React.FC<Props> = ({ stepItem, goToNextStep }: Props) => {
+const GameCard: React.FC<Props> = ({ stepItem, goToNextStep, step }: Props) => {
   const { description, inputs, title } = stepItem;
 
   const [validInputs, setValidInputs] = useState<boolean[]>(
@@ -35,7 +35,7 @@ const GameCard: React.FC<Props> = ({ stepItem, goToNextStep }: Props) => {
   return (
     <Card className="w-full max-w-7xl">
       <CardHeader>
-        <CardTitle>{title}</CardTitle>
+        <CardTitle>{`Étape ${step} : ${title}`}</CardTitle>
         <CardDescription className="flex flex-col gap-4">
           {description}
         </CardDescription>
