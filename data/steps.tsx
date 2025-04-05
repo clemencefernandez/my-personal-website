@@ -139,7 +139,7 @@ export const steps: Steps = [
           son adresse email soient disponibles dans ses détails de profil.`}
         </span>
         <span>
-          {`Cherchez les bonnes informations et complète les champs ci-dessous
+          {`Cherchez les bonnes informations et complètez les champs ci-dessous
           pour avancer dans l'enquête.`}
         </span>
       </>
@@ -212,7 +212,7 @@ export const steps: Steps = [
           disponibles dans ses détails de profil.
         </span>
         <span>
-          {`Cherchez les bonnes informations et complète les champs ci-dessous
+          {`Cherchez les bonnes informations et complètez les champs ci-dessous
           pour avancer dans l'enquête.`}
         </span>
       </div>
