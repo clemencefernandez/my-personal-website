@@ -77,7 +77,7 @@ export const steps: Steps = [
   {
     title: "Étape 2 : Une erreur fatale du cybercriminel...",
     description: (
-      <div className="flex flex-col gap-4 text-justify">
+      <>
         <span>
           Félicitations, vous avez mis la main sur le pseudo utilisé par notre
           cybercriminel&nbsp;! Facile, non&nbsp;? Mais l’affaire ne s’arrête pas
@@ -93,38 +93,26 @@ export const steps: Steps = [
           Lorsqu’un pseudo est suffisamment distinctif, cela permet souvent de
           retrouver d’autres comptes appartenant au même individu.
         </span>
-      </div>
+        <span>
+          Notre attaquant semble avoir laissé une trace sur un site de streaming
+          très connu, notamment dans le monde du gaming.
+        </span>
+      </>
     ),
     inputs: [
       {
         label: "Sur quel réseau social retrouve-t-on ce pseudo ?",
         validResponses: ["twitch"],
         description:
-          "Utilisez le pseudo trouvé précédemment pour poursuivre l’enquête sur d’autres plateformes.",
+          "Retrouve le nom du réseau social où l'attaquant a laissé son pseudo.",
         hint: {
           title: "Besoin d'un coup de pouce ?",
           description: (
             <>
               <span>
-                Notre attaquant semble avoir laissé une trace sur un site de
-                streaming très connu, notamment dans le monde du gaming.
-              </span>
-              <span>
                 Le logo est violet, et des personnalités comme Domingo,
                 MisterMV, et Kameto sont très connues sur cette plateforme… Tu
                 vois de quoi on parle ?
-              </span>
-              <span>
-                Les pseudonymes sont souvent facilement repérables, mais
-                attention, la recherche via le moteur de la plateforme peut ne
-                pas donner de résultats directs.
-              </span>
-              <span>
-                {`Si tu n'arrives pas à trouver le profil via la recherche, essaye
-                d'entrer l'adresse sous cette forme :`}{" "}
-                <strong>site.tv/[pseudo]</strong>.{" "}
-                {`Ça devrait t'orienter
-                directement vers son profil.`}
               </span>
             </>
           ),
@@ -134,10 +122,18 @@ export const steps: Steps = [
         label: "Quel est l'URL du profil de l'attaquant ?",
         validResponses: ["twitch.tv/frz_tom64"],
         responseFormat: "https://site.tv/[pseudo] ou https://site.tv/[pseudo]/",
-        description: "Copie colle l'URL du profil de l'attaquant.",
+        description:
+          "Copie colle l'URL du profil de l'attaquant en utilisant le pseudo trouvé dans l'image précédente.",
         hint: {
           description: (
-            <div className="flex flex-col gap-4">
+            <>
+              <span>
+                {`Si tu n'arrives pas à trouver le profil via la recherche, essaye
+                d'entrer l'adresse sous cette forme :`}{" "}
+                <strong>site.tv/[pseudo]</strong>.{" "}
+                {`Ça devrait t'orienter
+                directement vers son profil.`}
+              </span>
               <span>
                 {`Une URL (Uniform Resource Locator) est l'adresse web qui te
                 permet d’accéder à une page précise sur Internet. C’est comme
@@ -161,7 +157,7 @@ export const steps: Steps = [
                 de modifier une partie de l'URL pour accéder directement à
                 une page particulière.`}
               </span>
-            </div>
+            </>
           ),
         },
       },
@@ -401,8 +397,23 @@ export const steps: Steps = [
     inputs: [
       {
         label: "Donner l'une des passions de Tom.",
-        validResponses: ["moto et surf", "moto", "surf", "ride"],
-        description: "Cherchez un indice sur ses passions dans son profil.",
+        validResponses: [
+          "streaming, jeux vidéos, moto et surf",
+          "moto",
+          "surf",
+          "ride",
+          "gaming",
+          "jeux vidéos",
+          "jeux videos",
+          "jeu video",
+          "jeu vidéo",
+          "streaming",
+          "fifa",
+          "valorant",
+          "fortnite",
+        ],
+        description:
+          "Cherchez un indice sur ses passions dans ses différents réseaux.",
       },
       {
         label: "Quel est le nom de la plage de la photo de Tom ?",
@@ -445,6 +456,46 @@ export const steps: Steps = [
                 >
                   Ouvrir le livret
                 </a>
+              </span>
+            </>
+          ),
+        },
+      },
+    ],
+  },
+  {
+    title: "Étape 6 : Craquer le mot de passe de TomFraize",
+    description: (
+      <>
+        <span>
+          {`Grâce aux indices que vous avez collectés jusqu'à présent, vous avez peut-être une chance de deviner le mot de passe de TomFraize. En effet, une grande partie des mots de passe sont souvent basés sur des informations personnelles simples.`}
+        </span>
+        <span>
+          {`Vous savez que son chat s'appelle "Boa" grâce à son Instagram, et que "Clémence" semble être une personne proche de lui, peut-être même de sa famille, puisqu’il utilise son adresse email pour s’inscrire sur divers sites.`}
+        </span>
+        <span>
+          {`Il est maintenant temps de tester votre théorie et de voir si vous pouvez accéder à ses données privées.`}
+        </span>
+      </>
+    ),
+    inputs: [
+      {
+        label: "Quel est le mot de passe de TomFraize ?",
+        validResponses: ["boaclemence2010", "boaclemence2009"],
+        description:
+          "Tentez de deviner le mot de passe basé sur les informations personnelles de Tom.",
+        hint: {
+          description: (
+            <>
+              <span>
+                {`Pour trouver le mot de passe, souvenez-vous des indices : Tom a
+                un chat nommé "Boa" et utilise l'adresse email de Clémence.`}
+              </span>
+              <br />
+              <span>
+                Essayez une combinaison de ces informations simples avec des
+                chiffres, comme beaucoup de gens le font pour leurs mots de
+                passe.
               </span>
             </>
           ),
