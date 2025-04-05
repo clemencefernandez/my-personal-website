@@ -53,7 +53,7 @@ export function StartCard({ goToNextStep }: Props) {
     <Card className="w-full max-w-5xl">
       <CardHeader>
         <CardTitle>
-          Bienvenue, chers spécialistes de l'OSINT en herbe !
+          {`Bienvenue, chers spécialistes de l'OSINT en herbe !`}
         </CardTitle>
         <CardDescription className="space-y-3 flex flex-col gap-4">
           <span>
@@ -65,8 +65,8 @@ export function StartCard({ goToNextStep }: Props) {
             déjouer les pièges, trouver ses données personnelles.
           </span>
           <span>
-            Vous allez plonger dans le monde de la cybersécurité et du hacking…
-            Mais n’oubliez pas : vous êtes des hackers <em>éthiques</em> 🧠💻
+            {`Vous allez plonger dans le monde de la cybersécurité et du hacking…
+            Mais n’oubliez pas : vous êtes des hackers éthiques 🧠💻.`}
           </span>
           <span>
             Formez votre équipe, choisissez un nom, et que l’enquête commence !
