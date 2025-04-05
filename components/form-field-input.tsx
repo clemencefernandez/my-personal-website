@@ -17,7 +17,7 @@ import { z } from "zod";
 
 import { CheckIcon, Lightbulb } from "lucide-react";
 import { Dispatch, SetStateAction } from "react";
-import { Input as InputType } from "@/types/step";
+import { Input as InputType } from "@/types/model";
 
 export type FormFieldInputProps = InputType & {
   setIsCorrect: Dispatch<SetStateAction<boolean>>;
