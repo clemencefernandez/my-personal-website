@@ -492,7 +492,7 @@ export const steps: Steps = [
           {`Grâce aux indices que vous avez collectés jusqu'à présent, vous avez peut-être une chance de deviner le mot de passe de Tom Fraize. En effet, une grande partie des mots de passe sont souvent basés sur des informations personnelles simples.`}
         </span>
         <span>
-          {`Vous savez que son chat s'appelle "Boa" grâce à son Instagram, et que "Clémence" semble être une personne proche de lui, peut-être même de sa famille, puisqu’il utilise son adresse email pour s’inscrire sur divers sites.`}
+          {`Vous savez que son chat s'appelle "Boa" grâce à son Instagram, et que "Clémence" semble être une personne proche de lui, peut-être même de sa famille, puisqu’il utilise son adresse email pour s’inscrire sur divers sites. Vous savez également que Tom a l'air d'avoir le même âge que vous.`}
         </span>
         <span>
           {`Il est maintenant temps de tester votre théorie et de voir si vous pouvez accéder à ses données privées.`}
@@ -502,14 +502,22 @@ export const steps: Steps = [
     inputs: [
       {
         label: "Quel est le mot de passe de Tom Fraize ?",
-        validResponses: ["boaclemence2010", "boaclemence2009"],
+        validResponses: [
+          "boaclemence2010",
+          "2009boaclemence",
+          "boaclemence2009",
+          "2010boaclemence",
+          "2011boaclemence",
+          "boaclemence2011",
+        ],
+        responseFormat: "20*************",
         description:
           "Tentez de deviner le mot de passe basé sur les informations personnelles de Tom.",
         hint: {
           description: (
             <>
               <span>
-                {`Pour trouver le mot de passe, souvenez-vous des indices : Tom a
+                {`Pour trouver le mot de passe, souvenez-vous des indices : Tom a la même année de naissance que vous, il a
                 un chat nommé "Boa" et utilise l'adresse email de Clémence.`}
               </span>
               <span>
