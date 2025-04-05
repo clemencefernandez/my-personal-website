@@ -11,24 +11,15 @@ import {
 } from "@/components/ui/card";
 
 import FormFieldInputs from "./form-field-inputs";
-import { Step } from "@/type/step";
+import { GamePage } from "@/types/step";
 
-type Props = Step & {
-  submitButtonProps: Pick<
-    React.ComponentProps<"button">,
-    "onClick" | "children" | "className"
-  >;
-};
+type Props = { stepItem: GamePage; goToNextStep: () => void };
 
-const FormCard: React.FC<Props> = ({
-  content,
-  subtitle,
-  inputs,
-  title,
-  submitButtonProps,
-}) => {
+const GameCard: React.FC<Props> = ({ stepItem, goToNextStep }: Props) => {
+  const { subtitle, inputs, title } = stepItem;
+
   const [validInputs, setValidInputs] = useState<boolean[]>(
-    inputs ? Array(inputs.length).fill(false) : [true]
+    Array(inputs.length).fill(false)
   );
 
   const handleValidationChange = (index: number, isValid: boolean) => {
@@ -48,19 +39,19 @@ const FormCard: React.FC<Props> = ({
         <CardDescription>{subtitle}</CardDescription>
       </CardHeader>
       <CardContent>
-        {content && content}
-        {inputs && (
-          <FormFieldInputs
-            inputs={inputs}
-            handleValidationChange={handleValidationChange}
-          />
-        )}
+        <FormFieldInputs
+          inputs={inputs}
+          handleValidationChange={handleValidationChange}
+        />
       </CardContent>
       <CardFooter>
-        <Button disabled={!isFormValid} {...submitButtonProps} />
+        <Button
+          disabled={!isFormValid}
+          onClick={goToNextStep}
+        >{`Passer à l'étape suivante`}</Button>
       </CardFooter>
     </Card>
   );
 };
 
-export default FormCard;
+export default GameCard;

@@ -1,12 +1,9 @@
-import EndContent from "@/components/end-content";
-import { StartContent } from "@/components/start-content";
-import { Step } from "@/type/step";
+import { Steps } from "@/types/step";
 
-export const steps: Step[] = [
+export const steps: Steps = [
   {
     title: "Bienvenue",
     subtitle: "Bienvenue dans le formulaire.",
-    content: <StartContent />,
   },
   {
     title: "Première étape",
@@ -38,6 +35,5 @@ export const steps: Step[] = [
   {
     title: "Fin.",
     subtitle: "so whaaaat.",
-    content: <EndContent />,
   },
 ];

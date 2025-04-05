@@ -12,9 +12,8 @@ const stepNumberArray = Array.from({ length: steps.length }, (_, i) => i);
 
 type GameContextType = {
   step: (typeof stepNumberArray)[number];
-  goToNextStep: React.ButtonHTMLAttributes<HTMLButtonElement>["onClick"];
-  handleResetAndReload: React.ButtonHTMLAttributes<HTMLButtonElement>["onClick"];
-  startGame: (name: string) => void;
+  goToNextStep: () => void;
+  handleResetAndReload: () => void;
 };
 
 const GameContext = createContext<GameContextType | undefined>(undefined);
@@ -55,19 +54,12 @@ export const GameProvider: React.FC<PropsWithChildren> = ({ children }) => {
     window.location.reload();
   };
 
-  const startGame = (name: string) => {
-    window.localStorage.setItem("userName", name);
-    window.localStorage.setItem("startTime", Date.now().toString());
-    goToNextStep();
-  };
-
   return (
     <GameContext.Provider
       value={{
         step,
         goToNextStep,
         handleResetAndReload,
-        startGame,
       }}
     >
       {children}
