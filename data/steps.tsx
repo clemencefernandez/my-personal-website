@@ -504,7 +504,7 @@ export const steps: Steps = [
     ],
   },
   {
-    title: "Fin.",
-    description: "so whaaaat.",
+    title: "🎉 Mission accomplie !",
+    description: "Bravo ! Vous avez terminé la mission avec succès !",
   },
 ];
