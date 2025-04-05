@@ -1,8 +1,13 @@
+type Hint = {
+  title: string;
+  description: React.ReactNode;
+};
+
 export type Input = {
   label: string;
   validResponses: string[];
   description?: string;
-  hint?: string;
+  hint?: Hint;
 };
 
 type CommonPage = {

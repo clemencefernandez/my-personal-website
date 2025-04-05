@@ -18,6 +18,14 @@ import { z } from "zod";
 import { CheckIcon, Lightbulb } from "lucide-react";
 import { Dispatch, SetStateAction } from "react";
 import { Input as InputType } from "@/types/model";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "./ui/dialog";
 
 export type FormFieldInputProps = InputType & {
   setIsCorrect: Dispatch<SetStateAction<boolean>>;
@@ -28,6 +36,7 @@ const FormFieldInput = ({
   label,
   validResponses,
   description,
+  hint,
 }: FormFieldInputProps) => {
   const formSchema = z.object({
     input: z
@@ -87,10 +96,24 @@ const FormFieldInput = ({
                       <CheckIcon className="w-5 h-5" />
                     </Button>
                   )}
-                  <Button type="button" variant="secondary">
-                    <Lightbulb />
-                    Indice
-                  </Button>
+                  {hint && (
+                    <Dialog>
+                      <DialogTrigger asChild>
+                        <Button type="button" variant="secondary">
+                          <Lightbulb />
+                          Indice
+                        </Button>
+                      </DialogTrigger>
+                      <DialogContent>
+                        <DialogHeader>
+                          <DialogTitle> {hint.title}</DialogTitle>
+                          <DialogDescription className="space-y-2">
+                            {hint.description}
+                          </DialogDescription>
+                        </DialogHeader>
+                      </DialogContent>
+                    </Dialog>
+                  )}
                 </div>
               </FormControl>
               <FormDescription>{description}</FormDescription>

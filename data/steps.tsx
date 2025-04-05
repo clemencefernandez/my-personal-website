@@ -1,4 +1,5 @@
 import { Steps } from "@/types/model";
+
 import Link from "next/link";
 
 export const steps: Steps = [
@@ -41,6 +42,35 @@ export const steps: Steps = [
         validResponses: ["tom"],
         description:
           "Trouvez le pseudo de l'attaquant en vous appuyant sur les indices donnés.",
+        hint: {
+          title: "Besoin d'un coup de pouce ?",
+          description: (
+            <>
+              <span>
+                Pour retrouver le pseudonyme de l’attaquant, observe
+                attentivement l’image qu’il a laissée derrière lui.
+              </span>
+              <br />
+              <span>
+                Un indice pourrait bien se cacher dans ses métadonnées… rien
+                n’est laissé au hasard.
+              </span>
+              <br />
+              <span>
+                Télécharge l’image et consulte le livret d’enquête pour t’aider
+                dans ta fouille&nbsp;:{" "}
+                <a
+                  href="https://troubled-trollius-231.notion.site/Les-m-tadonn-es-1ccae4a6665e8013a00aff9982cd4aa4"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline underline-offset-4 hover:text-primary transition-colors"
+                >
+                  Ouvrir le livret
+                </a>
+              </span>
+            </>
+          ),
+        },
       },
     ],
   },

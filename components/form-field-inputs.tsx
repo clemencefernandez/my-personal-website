@@ -1,4 +1,4 @@
-import { Input } from "@/types/step";
+import { Input } from "@/types/model";
 import FormFieldInput from "./form-field-input";
 
 type Props = {
