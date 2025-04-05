@@ -10,7 +10,7 @@ import {
 import { steps } from "@/data/steps";
 
 const title = steps[steps.length - 1].title;
-const subtitle = steps[steps.length - 1].subtitle;
+const description = steps[steps.length - 1].description;
 
 type Props = {
   handleRestart: () => void;
@@ -29,7 +29,7 @@ const EndCard = ({ handleRestart }: Props) => {
     <Card>
       <CardHeader>
         <CardTitle>{title}</CardTitle>
-        <CardDescription>{subtitle}</CardDescription>
+        <CardDescription>{description}</CardDescription>
       </CardHeader>
       <CardContent>
         {userName}

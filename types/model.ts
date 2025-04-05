@@ -1,12 +1,13 @@
 export type Input = {
   label: string;
   validResponses: string[];
-  subtitle: string;
+  description?: string;
+  hint?: string;
 };
 
 type CommonPage = {
   title: string;
-  subtitle: string;
+  description: React.ReactNode;
 };
 
 export type GamePage = CommonPage & {

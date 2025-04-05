@@ -11,12 +11,12 @@ import {
 } from "@/components/ui/card";
 
 import FormFieldInputs from "./form-field-inputs";
-import { GamePage } from "@/types/step";
+import { GamePage } from "@/types/model";
 
 type Props = { stepItem: GamePage; goToNextStep: () => void };
 
 const GameCard: React.FC<Props> = ({ stepItem, goToNextStep }: Props) => {
-  const { subtitle, inputs, title } = stepItem;
+  const { description, inputs, title } = stepItem;
 
   const [validInputs, setValidInputs] = useState<boolean[]>(
     Array(inputs.length).fill(false)
@@ -33,10 +33,10 @@ const GameCard: React.FC<Props> = ({ stepItem, goToNextStep }: Props) => {
   const isFormValid = validInputs.every(Boolean);
 
   return (
-    <Card>
+    <Card className="w-full max-w-7xl">
       <CardHeader>
         <CardTitle>{title}</CardTitle>
-        <CardDescription>{subtitle}</CardDescription>
+        <CardDescription>{description}</CardDescription>
       </CardHeader>
       <CardContent>
         <FormFieldInputs
@@ -48,6 +48,7 @@ const GameCard: React.FC<Props> = ({ stepItem, goToNextStep }: Props) => {
         <Button
           disabled={!isFormValid}
           onClick={goToNextStep}
+          className="ml-auto"
         >{`Passer à l'étape suivante`}</Button>
       </CardFooter>
     </Card>

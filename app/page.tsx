@@ -7,7 +7,7 @@ import { steps } from "@/data/steps";
 import { StartCard } from "@/components/start-card";
 import EndCard from "@/components/end-card";
 import GameCard from "@/components/game-card";
-import { GamePage, Steps } from "@/types/step";
+import { GamePage, Steps } from "@/types/model";
 
 const isValidGameStep = (stepItem: Steps[number]): stepItem is GamePage => {
   const index = steps.findIndex((item) => item === stepItem);
@@ -37,7 +37,7 @@ export default function Page() {
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-mono)]">
       <GameProvider>
-        <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
+        <main className="flex flex-col gap-8 row-start-2 items-center w-full">
           <PageContent />
         </main>
         <Footer />

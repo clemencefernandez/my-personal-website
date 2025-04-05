@@ -1,7 +1,6 @@
 "use client";
-import Image from "next/image";
 import { Button } from "./ui/button";
-import { RotateCcw } from "lucide-react";
+import { HelpingHandIcon, RotateCcw } from "lucide-react";
 import { useGame } from "@/context/game-context";
 
 export default function Footer() {
@@ -15,14 +14,8 @@ export default function Footer() {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Image
-          aria-hidden
-          src="/file.svg"
-          alt="File icon"
-          width={16}
-          height={16}
-        />
-        Apprendre
+        <HelpingHandIcon />
+        Aide
       </a>
       <Button variant="ghost" onClick={handleResetAndReload}>
         <RotateCcw />

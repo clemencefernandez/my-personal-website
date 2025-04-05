@@ -15,14 +15,12 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 
-import { CheckIcon } from "lucide-react";
+import { CheckIcon, Lightbulb } from "lucide-react";
 import { Dispatch, SetStateAction } from "react";
+import { Input as InputType } from "@/types/step";
 
-export type FormFieldInputProps = {
+export type FormFieldInputProps = InputType & {
   setIsCorrect: Dispatch<SetStateAction<boolean>>;
-  validResponses: string[];
-  label: string;
-  description?: string;
 };
 
 const FormFieldInput = ({
@@ -89,6 +87,10 @@ const FormFieldInput = ({
                       <CheckIcon className="w-5 h-5" />
                     </Button>
                   )}
+                  <Button type="button" variant="secondary">
+                    <Lightbulb />
+                    Indice
+                  </Button>
                 </div>
               </FormControl>
               <FormDescription>{description}</FormDescription>

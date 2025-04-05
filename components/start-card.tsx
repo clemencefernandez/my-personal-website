@@ -20,6 +20,7 @@ import {
   Card,
   CardContent,
   CardDescription,
+  CardFooter,
   CardHeader,
   CardTitle,
 } from "./ui/card";
@@ -32,7 +33,7 @@ const FormSchema = z.object({
 });
 
 const title = steps[0].title;
-const subtitle = steps[0].subtitle;
+const description = steps[0].description;
 type Props = {
   goToNextStep: () => void;
 };
@@ -54,20 +55,18 @@ export function StartCard({ goToNextStep }: Props) {
     <Card>
       <CardHeader>
         <CardTitle>{title}</CardTitle>
-        <CardDescription>{subtitle}</CardDescription>
+        <CardDescription>{description}</CardDescription>
       </CardHeader>
-      <CardContent>
-        <Form {...form}>
-          <form
-            onSubmit={form.handleSubmit(onSubmit)}
-            className="w-2/3 space-y-6"
-          >
+
+      <Form {...form}>
+        <form onSubmit={form.handleSubmit(onSubmit)}>
+          <CardContent>
             <FormField
               control={form.control}
               name="username"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Username</FormLabel>
+                  <FormLabel>Nom du joueur</FormLabel>
                   <FormControl>
                     <Input
                       placeholder="Ton nom ou celui de ton équipe"
@@ -81,10 +80,14 @@ export function StartCard({ goToNextStep }: Props) {
                 </FormItem>
               )}
             />
-            <Button type="submit">GO !</Button>
-          </form>
-        </Form>
-      </CardContent>
+          </CardContent>
+          <CardFooter>
+            <Button className="w-full" type="submit">
+              Prêt à jouer ? GO !
+            </Button>
+          </CardFooter>
+        </form>
+      </Form>
     </Card>
   );
 }
