@@ -43,8 +43,7 @@ const FormFieldInput = ({
     input: z
       .string()
       .refine(
-        (val) =>
-          [...validResponses, "o", "cocorico"].includes(val.toLowerCase()),
+        (val) => [...validResponses, "cocorico"].includes(val.toLowerCase()),
         {
           message: "La réponse est incorrecte.",
         }
