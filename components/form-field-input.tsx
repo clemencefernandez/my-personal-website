@@ -42,9 +42,13 @@ const FormFieldInput = ({
   const formSchema = z.object({
     input: z
       .string()
-      .refine((val) => [...validResponses, "o"].includes(val.toLowerCase()), {
-        message: "La réponse est incorrecte.",
-      }),
+      .refine(
+        (val) =>
+          [...validResponses, "o", "cocorico"].includes(val.toLowerCase()),
+        {
+          message: "La réponse est incorrecte.",
+        }
+      ),
   });
 
   const form = useForm<z.infer<typeof formSchema>>({

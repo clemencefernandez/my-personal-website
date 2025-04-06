@@ -30,14 +30,14 @@ const EndCard = ({ handleRestart }: Props) => {
           <span>
             Bien joué équipe <strong>{userName}</strong> ! Grâce à votre
             persévérance, vous avez réussi à{" "}
-            <strong>craquer le mot de passe</strong> de TomFraize et à accéder à
-            ses <strong>coordonnées bancaires</strong>. Vous avez le combo
+            <strong>craquer le mot de passe</strong> de Tom Fraize et à accéder
+            à ses <strong>coordonnées bancaires</strong>. Vous avez le combo
             parfait : numéro de téléphone + mot de passe personnel !
           </span>
           <span>
             Mais comme vous êtes <strong>véritable hacker éthique</strong>, vous
             n’en ferez <strong>évidemment rien</strong>. vous savez que le but,
-            c’est d’apprendre, pas de nuire 💡
+            c’est d’apprendre, pas de nuire 💡.
           </span>
           <span>
             Vous venez de comprendre comment des données peuvent être
@@ -47,9 +47,8 @@ const EndCard = ({ handleRestart }: Props) => {
             ⏱️ Temps réalisé : <strong>{formattedTime}</strong>
           </span>
           <span>
-            Tu veux donner ton avis sur ce jeu ? Écris à{" "}
-            <a href="mailto:clemencefrz@gmail.com">clemencefrz@gmail.com</a> ou
-            envoie un DM à <strong>@tom_fraize</strong> sur Insta 😉
+            Tu veux donner ton avis sur ce jeu ? Envoie un DM à{" "}
+            <strong>@tom_fraize</strong> sur Insta 😉
           </span>
           <span>
             📚 Pour revoir tous les outils utilisés et les bonnes pratiques :{" "}

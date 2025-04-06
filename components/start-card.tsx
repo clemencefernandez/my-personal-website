@@ -57,7 +57,7 @@ export function StartCard({ goToNextStep }: Props) {
         </CardTitle>
         <CardDescription className="space-y-3 flex flex-col gap-4">
           <span>
-            {`Tisse Ta Toile a été piraté par un cybercriminel. L'attaquant pense
+            {`Tisse Ta Toile a été piraté par un cybercriminel. Le hacker pense
             s'en être tirer sans encombre. Mais qu'en est-il vraiment ?`}
           </span>
           <span>
