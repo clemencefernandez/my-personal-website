@@ -1,18 +1,14 @@
 "use client";
 
 import React from "react";
-import Footer from "@/components/footer";
 import { GameProvider, useGame } from "@/context/game-context";
 import { steps } from "@/data/steps";
 import { StartCard } from "@/components/start-card";
 import EndCard from "@/components/end-card";
 import GameCard from "@/components/game-card";
-import { GamePage, Steps } from "@/types/model";
 
-const isValidGameStep = (stepItem: Steps[number]): stepItem is GamePage => {
-  const index = steps.findIndex((item) => item === stepItem);
-  return index > 0 && index < steps.length - 1;
-};
+import FooterContent from "@/components/footer-content";
+import { isValidGameStep } from "./utils";
 
 const PageContent = () => {
   const { step, goToNextStep, handleResetAndReload } = useGame();
@@ -40,12 +36,14 @@ const PageContent = () => {
 
 export default function Page() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-mono)]">
+    <div className="flex flex-col min-h-screen font-[family-name:var(--font-geist-mono)]">
       <GameProvider>
-        <main className="flex flex-col gap-8 row-start-2 items-center w-full">
+        <main className="flex-1 flex justify-center items-center w-full p-4 sm:p-20">
           <PageContent />
         </main>
-        <Footer />
+        <footer className="w-full">
+          <FooterContent />
+        </footer>
       </GameProvider>
     </div>
   );

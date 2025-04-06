@@ -39,6 +39,7 @@ export const steps: Steps = [
     inputs: [
       {
         label: "Quel est le pseudo de l’attaquant ?",
+        shortLabel: "Pseudo twitch",
         validResponses: ["frz_tom64"],
         description:
           "Trouvez le pseudo de l'attaquant en vous appuyant sur les indices donnés.",
@@ -99,6 +100,7 @@ export const steps: Steps = [
     inputs: [
       {
         label: "De quel réseau social s'agit-il ?",
+        shortLabel: "Réseau social utilisé",
         responseFormat: "Format de réponse : ******",
         validResponses: [
           "twitch",
@@ -152,6 +154,7 @@ export const steps: Steps = [
     inputs: [
       {
         label: "Quel est l'URL du profil de l'attaquant ?",
+        shortLabel: "Url du profil Twitch",
         validResponses: [
           "https://twitch.tv/frz_tom64/",
           "twitch.tv/frz_tom64",
@@ -225,6 +228,7 @@ export const steps: Steps = [
     inputs: [
       {
         label: "Quel est le nom de famille de Tom ?",
+        shortLabel: "Nom de famille",
         validResponses: ["fraize"],
         description: "Cherchez le nom de Tom sur son profil Twitch.",
         responseFormat: "Format de réponse : ******",
@@ -239,6 +243,7 @@ export const steps: Steps = [
       },
       {
         label: "Quel est l'email professionnel de Tom ?",
+        shortLabel: "Mail de Tom",
         validResponses: ["clemencefrz@gmail.com"],
         responseFormat: "Format de réponse : ***********@*****.***",
         description:
@@ -262,6 +267,7 @@ export const steps: Steps = [
       },
       {
         label: "Quel est le compte Instagram de Tom ?",
+        shortLabel: "Compte instagram",
         validResponses: [
           "@tom_fraize",
           "instagram.com/tom_fraize",
@@ -332,6 +338,7 @@ export const steps: Steps = [
       {
         label:
           "Sur quel site y a-t-il eu une fuite de données impliquant l'email de Tom ?",
+        shortLabel: "Site où il y a eut fuite de données",
         validResponses: [
           "le slip français",
           "leslipfrancais",
@@ -369,6 +376,7 @@ export const steps: Steps = [
       {
         label:
           "Donnez une des informations sur Tom qui ont été compromises dans cette fuite de données.",
+        shortLabel: "Informations compromises dans la fuite de données",
         validResponses: [
           "L'adresse email, le nom, le numéro de téléphone, l'adresse postale",
           "numéro de telephone",
@@ -432,6 +440,7 @@ export const steps: Steps = [
     inputs: [
       {
         label: "Donner l'une des passions de Tom.",
+        shortLabel: "Passions de Tom",
         validResponses: [
           "streaming, jeux vidéos, moto et surf",
           "moto",
@@ -450,10 +459,11 @@ export const steps: Steps = [
           "fortnite",
         ],
         description:
-          "Cherchez un indice sur ses passions dans ses différents réseaux.",
+          "Cherchez un indice sur ses passions dans son profil instagram.",
       },
       {
         label: "Quel est le nom du lieu de la photo de Tom ?",
+        shortLabel: "Lieu où il a l'habitude d'aller",
         validResponses: [
           "plage de marinella",
           "marinella",
@@ -522,6 +532,7 @@ export const steps: Steps = [
     inputs: [
       {
         label: "Quel est le mot de passe de Tom Fraize ?",
+        shortLabel: "Mot de passe",
         validResponses: [
           "2010boaclemence",
           "boaclemence2010",

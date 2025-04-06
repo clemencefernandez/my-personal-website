@@ -5,6 +5,7 @@ type Hint = {
 
 export type Input = {
   label: string;
+  shortLabel: string;
   validResponses: string[];
   responseFormat?: string;
   description?: string;
