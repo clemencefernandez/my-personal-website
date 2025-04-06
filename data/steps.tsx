@@ -89,11 +89,18 @@ export const steps: Steps = [
         shortLabel: "Url du profil Twitch",
         validResponses: [
           "https://twitch.tv/frz_tom64/",
+          "https://www.twitch.tv/frz_tom64/",
+          "https://www.twitch.tv/frz_tom64/",
           "twitch.tv/frz_tom64",
+          "www.twitch.tv/frz_tom64",
           "https://twitch.tv/frz_tom64",
+          "https://www.twitch.tv/frz_tom64",
           "http://twitch.tv/frz_tom64/",
+          "http://www.twitch.tv/frz_tom64/",
           "http://twitch.tv/frz_tom64",
+          "http://www.twitch.tv/frz_tom64",
           "twitch.tv/frz_tom64/",
+          "www.twitch.tv/frz_tom64/",
         ],
         responseFormat: "Format de réponse : https://******.**/*********/",
         description:
