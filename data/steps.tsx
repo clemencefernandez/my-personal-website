@@ -73,14 +73,9 @@ export const steps: Steps = [
     ],
   },
   {
-    title: "Une erreur fatale du cybercriminel...",
+    title: "Une erreur fatale du cybercriminelle...",
     description: (
       <>
-        <span>
-          Félicitations, vous avez mis la main sur le pseudo utilisé par notre
-          cybercriminel&nbsp;! Facile, non&nbsp;? Mais l’affaire ne s’arrête pas
-          là...
-        </span>
         <span>
           D’après nos analyses, ce pseudo aurait également été utilisé sur
           d’autres plateformes en ligne — une erreur classique, mais lourde de
@@ -95,48 +90,6 @@ export const steps: Steps = [
           Notre attaquant semble avoir laissé une trace sur un site de streaming
           très connu, notamment dans le monde du gaming.
         </span>
-      </>
-    ),
-    inputs: [
-      {
-        label: "De quel réseau social s'agit-il ?",
-        shortLabel: "Réseau social utilisé",
-        responseFormat: "Format de réponse : ******",
-        validResponses: [
-          "twitch",
-          "twich",
-          "twitch.tv",
-          "www.twitch.tv",
-          "https://twitch.tv",
-          "https://www.twitch.tv",
-          "https://twitch.tv/",
-          "https://www.twitch.tv/",
-          "http://twitch.tv",
-          "http://www.twitch.tv",
-          "http://twitch.tv/",
-          "http://www.twitch.tv/",
-        ],
-        description:
-          "Retrouve le nom du réseau social où l'attaquant a laissé son pseudo.",
-        hint: {
-          title: "Besoin d'un coup de pouce ?",
-          description: (
-            <>
-              <span>
-                Le logo est violet, et des personnalités comme Domingo,
-                MisterMV, et Kameto sont très connues sur cette plateforme… Tu
-                vois de quoi on parle ?
-              </span>
-            </>
-          ),
-        },
-      },
-    ],
-  },
-  {
-    title: "Explorer le profil de Tom",
-    description: (
-      <>
         <span>
           {`Vous avez trouvé le pseudo de Tom sur Twitch. Maintenant, il est temps
           d'explorer son profil pour en apprendre davantage sur lui.`}
