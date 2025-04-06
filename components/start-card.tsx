@@ -53,9 +53,7 @@ export function StartCard({ goToNextStep }: Props) {
   return (
     <Card className="w-full max-w-5xl">
       <CardHeader>
-        <CardTitle>
-          {`Bienvenue, chers spécialistes de l'OSINT en herbe !`}
-        </CardTitle>
+        <CardTitle>{`Bienvenue !`}</CardTitle>
         <CardDescription className="space-y-3 flex flex-col gap-4">
           <span>
             {`Tisse Ta Toile a été piraté par un cybercriminel. Le hacker pense
