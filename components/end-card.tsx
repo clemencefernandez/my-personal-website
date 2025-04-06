@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Button } from "./ui/button";
 import {
   Card,
@@ -7,20 +8,57 @@ import {
   CardHeader,
   CardTitle,
 } from "./ui/card";
+import { supabase } from "@/lib/supabaseClient";
 
 type Props = {
   handleRestart: () => void;
 };
 
+const saveToDatabase = async ({
+  team_name,
+  start_at,
+}: {
+  team_name: string;
+  start_at: string;
+}) => {
+  try {
+    const { error } = await supabase.from("game_sessions").insert([
+      {
+        team_name,
+        start_at,
+      },
+    ]);
+
+    if (error) {
+      console.error("Error inserting data:", error);
+    } else {
+      console.log("Data inserted successfully:", { start_at, team_name });
+    }
+  } catch (error) {
+    console.error("Unexpected error:", error);
+  }
+};
+
 const EndCard = ({ handleRestart }: Props) => {
   const startTime = window.localStorage.getItem("startTime");
   const userName = window.localStorage.getItem("userName") || "agent anonyme";
-  const finishTime = Date.now();
-  const startTimeInMs = startTime ? parseInt(startTime) : 0;
-  const timeElapsed = startTime ? finishTime - startTimeInMs : 0;
+  const endTimeInMs = Date.now();
+  const startTimeInMs = startTime ? new Date(startTime).getTime() : 0;
+  const timeElapsed = startTime ? endTimeInMs - startTimeInMs : 0;
   const minutes = Math.floor(timeElapsed / 60000);
   const seconds = Math.floor((timeElapsed % 60000) / 1000);
   const formattedTime = `${minutes} minutes et ${seconds} secondes`;
+
+  useEffect(() => {
+    if (startTime && userName) {
+      saveToDatabase({
+        start_at: startTime,
+        team_name: userName,
+      });
+    }
+    // We want to save the data only one
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <Card className="w-full max-w-7xl">

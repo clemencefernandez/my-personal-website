@@ -44,8 +44,9 @@ export function StartCard({ goToNextStep }: Props) {
   });
 
   function onSubmit(data: z.infer<typeof FormSchema>) {
+    const now = new Date();
     window.localStorage.setItem("userName", data.username);
-    window.localStorage.setItem("startTime", Date.now().toString());
+    window.localStorage.setItem("startTime", now.toISOString());
     goToNextStep();
   }
 

@@ -10,9 +10,9 @@ export default function FooterContent() {
   const { handleResetAndReload } = useGame();
 
   return (
-    <div className="rounded-md flex flex-wrap gap-6 items-center justify-center px-4 w-full">
+    <div className="rounded-md flex flex-wrap gap-6 items-center justify-center px-4 w-full h-full">
       {/* Section Aide */}
-      <div className="flex flex-col items-center gap-3 rounded-md text-sm font-medium">
+      <div className="flex items-center gap-3 rounded-md text-sm font-medium">
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4 text-white!"
           href="https://troubled-trollius-231.notion.site/Protection-num-rique-1c7ae4a6665e801fa652f71ab2b1fbc6"
