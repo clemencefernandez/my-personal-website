@@ -46,7 +46,7 @@ const FormFieldInput = ({
         (val) => [...validResponses, "cocorico"].includes(val.toLowerCase()),
         {
           message:
-            "La réponse est incorrecte. Pour vous aidez, cliquez sur Indice !",
+            "La réponse est incorrecte. Pour vous aider, cliquez sur Indice !",
         }
       ),
   });
