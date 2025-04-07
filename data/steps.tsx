@@ -95,9 +95,9 @@ export const steps: Steps = [
           (https://twitch.tv/frz_tom64/) pour en apprendre davantage sur lui.
         </span>
         <span>
-          {`Si tu n'as pas de téléphone ou aucun accès à Twitch, `}
+          {`Si vous n'avez pas de téléphone ou d'accès à Twitch, `}
           <Link href="/twitch.png" target="_blank" rel="noopener noreferrer">
-            clique-ici
+            cliquez-ici
           </Link>{" "}
           {`pour télécharger la capture d'écran du profil de Tom`}.
         </span>
@@ -117,13 +117,13 @@ export const steps: Steps = [
                 dans la bio de son profil Twitch (https://twitch.tv/frz_tom64/).
               </span>
               <span>
-                {`Si tu n'as pas de téléphone ou aucun accès à Twitch, `}
+                {`Si vous n'avez pas de téléphone ou d'accès à Twitch, `}
                 <Link
                   href="/twitch.png"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  clique-ici
+                  cliquez-ici
                 </Link>{" "}
                 {`pour télécharger la capture d'écran du profil de Tom`}.
               </span>
@@ -142,13 +142,13 @@ export const steps: Steps = [
           description: (
             <>
               <span>
-                {`Si tu n'as pas de téléphone ou aucun accès à Twitch, `}
+                {`Si vous n'avez pas de téléphone ou d'accès à Twitch, `}
                 <Link
                   href="/twitch.png"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  clique-ici
+                  cliquez-ici
                 </Link>{" "}
                 {`pour télécharger la capture d'écran du profil de Tom`}.
               </span>
@@ -178,13 +178,13 @@ export const steps: Steps = [
           description: (
             <>
               <span>
-                {`Si tu n'as pas de téléphone ou aucun accès à Twitch, `}
+                {`Si vous n'avez pas de téléphone ou d'accès à Twitch, `}
                 <Link
                   href="/twitch.png"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  clique-ici
+                  cliquez-ici
                 </Link>{" "}
                 {`pour télécharger la capture d'écran du profil de Tom`}.
               </span>
@@ -345,13 +345,13 @@ export const steps: Steps = [
           description: (
             <>
               <span>
-                {`Si tu n'as pas de téléphone ou de compte Insta, `}
+                {`Si vous n'avez pas de téléphone ou de compte Insta, `}
                 <Link
                   href="/image_insta.jpg"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  clique-ici
+                  cliquez-ici
                 </Link>{" "}
                 pour télécharger la photo.
                 {` Pour trouver le nom de la plage, essayez d'utiliser`}{" "}
