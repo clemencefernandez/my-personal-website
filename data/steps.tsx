@@ -28,6 +28,16 @@ export const steps: Steps = [
           Peut-être contient-elle des indices permettant d’identifier les
           hackers ?
         </span>
+        <span>
+          <a
+            href="https://www.metadata2go.com/view-metadata"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline underline-offset-4 hover:text-primary transition-colors"
+          >
+            {`Vous pouvez analyser les métadonnées de l'image en vous aidant du site metadata2go.`}
+          </a>
+        </span>
       </>
     ),
     inputs: [
