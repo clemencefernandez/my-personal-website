@@ -307,18 +307,15 @@ export const steps: Steps = [
         </span>
         <span>
           Sur son{" "}
-          <a
-            href="https://www.instagram.com/tom_fraize/p/DIG-lI-omqt/"
+          <Link
+            href="/image_insta.jpg"
             target="_blank"
             rel="noopener noreferrer"
-            className="underline"
           >
-            Insta,
-          </a>{" "}
+            cliquez-ici
+          </Link>{" "}
           {`Tom a posté `}
-          une photo où il est en train de profiter du soleil. Regardez bien
-          cette photo : elle pourrait nous donner un indice important pour
-          découvrir où il se trouve.
+          une photo où il est en train de profiter du soleil.
         </span>
       </>
     ),
