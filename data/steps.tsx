@@ -67,82 +67,10 @@ export const steps: Steps = [
   {
     title: "Une erreur fatale...",
     description: (
-      <>
+      <div className="flex flex-col gap-4 text-justify">
         <span>
           D’après nos analyses, ce pseudo aurait également été utilisé sur
           Twitch.
-        </span>
-        <span>
-          De nombreuses personnes réutilisent le même pseudo sur plusieurs
-          sites. Lorsqu’un pseudo est suffisamment distinctif, cela permet
-          souvent de retrouver d’autres comptes appartenant au même individu.
-        </span>
-        <span>
-          {`Cherchez les bonnes informations et complètez les champs ci-dessous
-          pour avancer dans l'enquête.`}
-        </span>
-      </>
-    ),
-    inputs: [
-      {
-        label: "Quel est l'URL du profil du hacker ?",
-        shortLabel: "Url du profil Twitch",
-        validResponses: [
-          "https://twitch.tv/frz_tom64/",
-          "https://www.twitch.tv/frz_tom64/",
-          "https://www.twitch.tv/frz_tom64/",
-          "twitch.tv/frz_tom64",
-          "www.twitch.tv/frz_tom64",
-          "https://twitch.tv/frz_tom64",
-          "https://www.twitch.tv/frz_tom64",
-          "http://twitch.tv/frz_tom64/",
-          "http://www.twitch.tv/frz_tom64/",
-          "http://twitch.tv/frz_tom64",
-          "http://www.twitch.tv/frz_tom64",
-          "twitch.tv/frz_tom64/",
-          "www.twitch.tv/frz_tom64/",
-        ],
-        responseFormat: "Format de réponse : https://******.**/*********/",
-        description:
-          "Les urls sur twitch sont de la forme twitch.tv/ton_pseudo. Trouvez l'url du profil de Tom.",
-        hint: {
-          description: (
-            <>
-              <span>
-                {`Une URL est l'adresse web qui te
-                permet d’accéder à une page précise sur Internet. C’est comme
-                une adresse postale mais sur le web.`}
-              </span>
-              <span>
-                Tu peux consulter le livret d’enquête pour t’aider dans ta
-                recherche&nbsp;:{" "}
-                <a
-                  href="https://troubled-trollius-231.notion.site/Les-URLS-1ccae4a6665e808d8c54df6a0aab6ae7"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="underline underline-offset-4 hover:text-primary transition-colors"
-                >
-                  {`Ouvrir le livret d'aide`}
-                </a>
-              </span>
-              <span>
-                {`Pour retrouver le cybercriminel, tu dois comprendre comment
-                fonctionnent ces différentes parties. Parfois, il suffit juste
-                de modifier une partie de l'URL pour accéder directement à
-                une page particulière.`}
-              </span>
-            </>
-          ),
-        },
-      },
-    ],
-  },
-  {
-    title: "Identifier Tom",
-    description: (
-      <div className="flex flex-col gap-4 text-justify">
-        <span>
-          {`Il semblerait que ce petit cybercriminel "Tom" laisse un peu trop d'infos sur lui sur ses réseaux... Profitons-en !`}
         </span>
         <span>
           Explorez son{" "}
@@ -194,7 +122,8 @@ export const steps: Steps = [
         },
       },
       {
-        label: "Quel est l'email de Tom ?",
+        label:
+          "Quel est l'email de Tom (qui a l'air d'avoir été emprunté par une de ses proches) ?",
         shortLabel: "Mail de Tom",
         validResponses: ["clemencefrz@gmail.com"],
         responseFormat: "Format de réponse : ***********@*****.***",
@@ -352,6 +281,9 @@ export const steps: Steps = [
           "phone numbers",
           "physical addresses",
           "email addresses, names, phone numbers, physical addresses",
+          "compromised data: email addresses, names, phone numbers, physical addresses",
+          " email addresses, names, phone numbers, physical addresses",
+          "data: email addresses, names, phone numbers, physical addresses",
         ],
       },
     ],
