@@ -154,7 +154,7 @@ export const steps: Steps = [
           >
             profil Twitch
           </a>{" "}
-          pour en apprendre davantage sur lui.
+          (https://twitch.tv/frz_tom64/) pour en apprendre davantage sur lui.
         </span>
       </div>
     ),
@@ -169,7 +169,7 @@ export const steps: Steps = [
             <>
               <span>
                 Le nom de famille pourrait être indiqué dans la page /about ou
-                dans la bio de son profil Twitch.
+                dans la bio de son profil Twitch (https://twitch.tv/frz_tom64/).
               </span>
               <span>
                 {`Si tu n'as pas de téléphone ou aucun accès à Twitch, `}
