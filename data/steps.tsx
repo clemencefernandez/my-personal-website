@@ -85,7 +85,7 @@ export const steps: Steps = [
     ),
     inputs: [
       {
-        label: "Quel est l'URL du profil de l'attaquant ?",
+        label: "Quel est l'URL du profil du hacker ?",
         shortLabel: "Url du profil Twitch",
         validResponses: [
           "https://twitch.tv/frz_tom64/",
@@ -125,9 +125,8 @@ export const steps: Steps = [
                   {`Ouvrir le livret d'aide`}
                 </a>
               </span>
-
               <span>
-                {`Pour retrouver l'attaquant, tu dois comprendre comment
+                {`Pour retrouver le cybercriminel, tu dois comprendre comment
                 fonctionnent ces différentes parties. Parfois, il suffit juste
                 de modifier une partie de l'URL pour accéder directement à
                 une page particulière.`}
