@@ -156,6 +156,13 @@ export const steps: Steps = [
           </a>{" "}
           (https://twitch.tv/frz_tom64/) pour en apprendre davantage sur lui.
         </span>
+        <span>
+          {`Si tu n'as pas de téléphone ou aucun accès à Twitch, `}
+          <Link href="/twitch.png" target="_blank" rel="noopener noreferrer">
+            clique-ici
+          </Link>{" "}
+          {`pour télécharger la capture d'écran du profil de Tom`}.
+        </span>
       </div>
     ),
     inputs: [
