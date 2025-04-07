@@ -107,7 +107,11 @@ const FormFieldInput = ({
                   {hint && (
                     <Dialog>
                       <DialogTrigger asChild>
-                        <Button type="button" variant="secondary">
+                        <Button
+                          type="button"
+                          variant="secondary"
+                          className="bg-amber-300"
+                        >
                           <Lightbulb />
                           Indice
                         </Button>
