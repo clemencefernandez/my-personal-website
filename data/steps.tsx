@@ -315,7 +315,7 @@ export const steps: Steps = [
     ],
   },
   {
-    title: "Trouvez Tom à partir d'une photo",
+    title: "Localisez la plage de la photo postée par Tom sur Insta",
     description: (
       <>
         <span>
@@ -340,7 +340,7 @@ export const steps: Steps = [
     ),
     inputs: [
       {
-        label: "Quel est le nom du lieu de la photo de Tom ?",
+        label: "Quel est le nom de la plage visible sur la photo de Tom ?",
         shortLabel: "Lieu où il a l'habitude d'aller",
         validResponses: [
           "plage de marinella",
