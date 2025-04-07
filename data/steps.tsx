@@ -166,10 +166,23 @@ export const steps: Steps = [
         responseFormat: "Format de réponse : ******",
         hint: {
           description: (
-            <span>
-              Le nom de famille pourrait être indiqué dans la page /about ou
-              dans la bio de son profil Twitch.
-            </span>
+            <>
+              <span>
+                Le nom de famille pourrait être indiqué dans la page /about ou
+                dans la bio de son profil Twitch.
+              </span>
+              <span>
+                {`Si tu n'as pas de téléphone ou aucun accès à Twitch, `}
+                <Link
+                  href="/twitch.png"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  clique-ici
+                </Link>{" "}
+                {`pour télécharger la capture d'écran du profil de Tom`}.
+              </span>
+            </>
           ),
         },
       },
@@ -182,6 +195,17 @@ export const steps: Steps = [
           title: "Besoin d'un coup de pouce ?",
           description: (
             <>
+              <span>
+                {`Si tu n'as pas de téléphone ou aucun accès à Twitch, `}
+                <Link
+                  href="/twitch.png"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  clique-ici
+                </Link>{" "}
+                {`pour télécharger la capture d'écran du profil de Tom`}.
+              </span>
               <span>
                 {`Il est possible que l'email de Tom apparaisse dans les
                 informations liées à ses contacts ou ses partenariats.`}
@@ -207,6 +231,17 @@ export const steps: Steps = [
           title: "Besoin d'un coup de pouce ?",
           description: (
             <>
+              <span>
+                {`Si tu n'as pas de téléphone ou aucun accès à Twitch, `}
+                <Link
+                  href="/twitch.png"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  clique-ici
+                </Link>{" "}
+                {`pour télécharger la capture d'écran du profil de Tom`}.
+              </span>
               <span>
                 {`Souvenez-vous de l’indice laissé dans la bio de Tom sur son compte Twitch. Il mentionnait un lien vers son Instagram.`}
               </span>
