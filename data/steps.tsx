@@ -353,7 +353,9 @@ export const steps: Steps = [
                 pour télécharger la photo.
                 {` Pour trouver le nom de la plage, essayez d'utiliser`}{" "}
                 <a
-                  href={"https://images.google.com/"}
+                  href={
+                    "https://www.google.com/search?vsrid=CLKD1fKM05eqrwEQAhgBIiQ4ODMyOTc1MS0yNzgxLTQ3NWQtOTQyYi02YTI0MDI5MTk3NmM&gsessionid=iAvMODIUqGlRFiOIYdKWiaxmW1vHXnJVGcRsuwfvo7iXv72kakK09w&lsessionid=_wCOFExQ3mV1ZJP4OB8QhQO0fhk5GLSBCyU-5D4jXqY0tDw6VUyRcA&vsdim=1000,666&vsint=CAIqDAoCCAcSAggKGAEgATojChYNAAAAPxUAAAA_HQAAgD8lAACAPzABEOgHGJoFJQAAgD8&lns_mode=un&source=lns.web.gsbubb&udm=26&lns_surface=26&lns_vfs=e&qsubts=1744044694036&biw=1728&bih=847&hl=fr"
+                  }
                   target="_blank"
                   rel="noopener noreferrer"
                   className="underline"
