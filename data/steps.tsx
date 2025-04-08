@@ -312,10 +312,20 @@ export const steps: Steps = [
             target="_blank"
             rel="noopener noreferrer"
           >
-            cliquez-ici
+            Insta
           </Link>{" "}
           {`Tom a posté `}
           une photo où il est en train de profiter du soleil.
+        </span>
+        <span>
+          <Link
+            href="https://troubled-trollius-231.notion.site/Outils-pour-retrouver-une-image-ou-une-personne-1ccae4a6665e8007b20cd7d21ef967ff"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Google Lens
+          </Link>{" "}
+          pourrait vous être utile.
         </span>
       </>
     ),
@@ -342,38 +352,17 @@ export const steps: Steps = [
           description: (
             <>
               <span>
-                {`Si vous n'avez pas de téléphone ou de compte Insta, `}
+                {`Si vous n'avez pas de téléphone, ou que vous ne savez pas utiliser`}{" "}
+                Google Lens
+                {", "}
                 <Link
-                  href="/image_insta.jpg"
+                  href="/image_insta_2.png"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   cliquez-ici
                 </Link>{" "}
-                pour télécharger la photo.
-                {` Pour trouver le nom de la plage, essayez d'utiliser`}{" "}
-                <a
-                  href={"https://images.google.com/"}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="underline"
-                >
-                  Google Lens
-                </a>{" "}
-                pour analyser la photo.
-              </span>
-
-              <span>
-                {`Consultez aussi le livret d'enquête pour plus d'infos sur cet
-                outil :`}{" "}
-                <a
-                  href="https://troubled-trollius-231.notion.site/Retrouver-un-endroit-avec-Google-Lens-1ccae4a6665e8007b20cd7d21ef967ff"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="underline"
-                >
-                  {`Ouvrir le livret d'aide`}
-                </a>
+                pour voir le résultat de la recherche sur Google Lens.
               </span>
             </>
           ),
