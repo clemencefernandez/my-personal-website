@@ -228,8 +228,10 @@ export const steps: Steps = [
         shortLabel: "Site où il y a eut fuite de données",
         validResponses: [
           "le slip français",
+          " le slip français",
           "leslipfrancais",
-          "le slip francais",
+          " leslipfrancais",
+          " le slip francais ",
         ],
         hint: {
           description: (
@@ -500,7 +502,7 @@ export const steps: Steps = [
           description: (
             <>
               <span>
-                {`En général, les personnes incluent le nom de leur animal de compagnie, leur numéro de département et un caractère spécial (comme ! ou ?).`}
+                {`En général, les personnes incluent le nom de leur animal de compagnie.`}
               </span>
               <span>
                 Essayez une combinaison de ces informations simples avec des

@@ -83,7 +83,7 @@ const FormFieldInput = ({
                 <div className="flex flex-col md:flex-row gap-2 items-center">
                   <Input
                     autoComplete="off"
-                    placeholder={responseFormat ?? "Format de réponse : ****"}
+                    placeholder={responseFormat ?? "Votre réponse ici"}
                     {...field}
                     disabled={!!isSubmitSuccessful}
                     className={`transition-allduration-300${
