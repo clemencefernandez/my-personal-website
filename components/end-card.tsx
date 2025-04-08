@@ -96,9 +96,8 @@ const EndCard = ({ handleRestart }: Props) => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              consulte le livret d’enquête ici
+              consulte le livret d’enquête ici.
             </a>
-            .
           </span>
           <span>
             <h2 className="text-2xl font-bold">
