@@ -105,10 +105,7 @@ const EndCard = ({ handleRestart }: Props) => {
             </h2>
             <p className="text-muted-foreground">
               L’OSINT (Open Source Intelligence) consiste à collecter des
-              informations à partir de sources publiques. Voici quelques outils
-              gratuits et amusants pour tester ce qui est accessible en ligne te
-              concernant. Ces exercices sont légaux, éducatifs et souvent
-              surprenants !
+              informations à partir de sources publiques.
             </p>
 
             <div className="grid md:grid-cols-2 gap-4">
