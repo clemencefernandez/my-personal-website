@@ -225,7 +225,7 @@ export const steps: Steps = [
     inputs: [
       {
         label: "Sur quel site a fuité le mail de Tom ?",
-        shortLabel: "Site où il y a eut fuite de données",
+        shortLabel: "Site où il y a eu fuite de données",
         validResponses: [
           "le slip français",
           " le slip français",
