@@ -72,9 +72,6 @@ export function StartCard({ goToNextStep }: Props) {
             {". "}
             Mais n’oubliez pas : vous êtes des hackers éthiques 🧠💻.
           </span>
-          <span>
-            Formez votre équipe, choisissez un nom, et que l’enquête commence !
-          </span>
         </CardDescription>
       </CardHeader>
 
@@ -97,7 +94,7 @@ export function StartCard({ goToNextStep }: Props) {
           </CardContent>
           <CardFooter>
             <Button className="w-full mt-5" type="submit">
-              Commencer le jeu !
+              Commencer le jeu
             </Button>
           </CardFooter>
         </form>
