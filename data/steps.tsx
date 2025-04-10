@@ -80,19 +80,7 @@ export const steps: Steps = [
       <div className="flex flex-col gap-4 text-justify">
         <span>
           D’après nos analyses, ce pseudo aurait également été utilisé sur
-          Twitch.
-        </span>
-        <span>
-          Explorez son{" "}
-          <a
-            href="https://www.twitch.tv/frz_tom64/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline"
-          >
-            profil Twitch
-          </a>{" "}
-          (https://twitch.tv/frz_tom64/) pour en apprendre davantage sur lui.
+          Twitch (https://twitch.tv/frz_tom64/).
         </span>
         <span>
           {`Si vous n'avez pas de téléphone ou d'accès à Twitch, `}
@@ -208,8 +196,7 @@ export const steps: Steps = [
           fuite, il pourrait y avoir des informations compromises ailleurs.`}
         </span>
         <span>
-          Pour cela, nous allons utiliser des outils de cybersécurité puissants
-          comme{" "}
+          Pour cela, nous allons aller sur le site{" "}
           <a
             href="https://haveibeenpwned.com/"
             target="_blank"
@@ -218,26 +205,29 @@ export const steps: Steps = [
           >
             Have I Been Pwned
           </a>{" "}
-          {`pour vérifier si le mail de Tom apparaît dans des fuites de données.`}
+          {`pour vérifier si certaines nouvelles données de Tom apparaissent dans des fuites de données.`}
         </span>
       </div>
     ),
     inputs: [
       {
-        label: "Sur quel site a fuité le mail de Tom ?",
+        label:
+          "Lorsqu'on analyse l'adresse mail de Tom sur le site de cybersécurité, on voit qu'il apparaît dans une fuite de donnée. Quel est le site concerné ?",
         shortLabel: "Site où il y a eu fuite de données",
         validResponses: [
           "le slip français",
           " le slip français",
           "leslipfrancais",
           " leslipfrancais",
+          "leslipfrançais",
+          "   le slip français",
           " le slip francais ",
         ],
         hint: {
           description: (
             <div className="flex flex-col gap-4">
               <span>
-                {`Un site particulièrement intéressant pourrait être celui d'une
+                {`Va sur le site Have I Been Pwned, entre l'adresse mail de Tom et regarde les résultats en bas de la page. Un site particulièrement intéressant pourrait être celui d'une
                 marque de vêtements. Recherche les fuites associées à cet email
                 et essaie de repérer le site dans lequel il pourrait avoir été
                 exposé.`}
@@ -321,13 +311,12 @@ export const steps: Steps = [
         </span>
         <span>
           <Link
-            href="https://troubled-trollius-231.notion.site/Outils-pour-retrouver-une-image-ou-une-personne-1ccae4a6665e8007b20cd7d21ef967ff"
+            href="/image_insta_2.png"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Google Lens
-          </Link>{" "}
-          pourrait vous être utile.
+            Google Lens pourrait vous êtes utile.
+          </Link>
         </span>
       </>
     ),
@@ -337,6 +326,11 @@ export const steps: Steps = [
         shortLabel: "Lieu où il a l'habitude d'aller",
         validResponses: [
           "plage de marinella",
+          "sable d'or",
+          "sable dor",
+          "plage de sable dor",
+          "sables d'or",
+          "sables dor",
           "marinella",
           "plage marinella",
           "plage de la marinella",

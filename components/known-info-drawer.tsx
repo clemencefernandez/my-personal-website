@@ -6,7 +6,6 @@ import { Button } from "./ui/button";
 import {
   Drawer,
   DrawerContent,
-  DrawerDescription,
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
@@ -48,7 +47,7 @@ export default function KnownInfoDrawer() {
             <UserRound />
             Infos connues sur Tom
           </DrawerTitle>
-          <DrawerDescription className="flex flex-col gap-1">
+          <div className="flex flex-col gap-1">
             {knownInfos
               ? knownInfos.map((info, key) => (
                   <span
@@ -56,7 +55,7 @@ export default function KnownInfoDrawer() {
                   >{`${info.shortLabel} : ${info.validResponses[0]}`}</span>
                 ))
               : "Pas d'infos pour l'instant."}
-          </DrawerDescription>
+          </div>
         </DrawerHeader>
       </DrawerContent>
     </Drawer>

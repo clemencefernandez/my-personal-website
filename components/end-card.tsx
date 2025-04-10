@@ -129,22 +129,8 @@ const EndCard = ({ handleRestart }: Props) => {
               <Card>
                 <CardContent className="p-4 space-y-2">
                   <h3 className="font-semibold">
-                    📱 Que révèle ton numéro de téléphone ?
-                  </h3>
-                  <p>
-                    Découvre les informations publiques associées à ton numéro
-                    de téléphone.
-                  </p>
-                  <Link href="https://epieos.com" target="_blank">
-                    <Button variant="outline">🔎 Rechercher sur Epieos</Button>
-                  </Link>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardContent className="p-4 space-y-2">
-                  <h3 className="font-semibold">
-                    🖼️ Des photos de toi circulent-elles en ligne ?
+                    🖼️ Des photos de toi ou de tes sosies circulent-elles en
+                    ligne ?
                   </h3>
                   <p>
                     Utilise la reconnaissance faciale pour savoir si des images
@@ -152,24 +138,6 @@ const EndCard = ({ handleRestart }: Props) => {
                   </p>
                   <Link href="https://pimeyes.com" target="_blank">
                     <Button variant="outline">🔎 Rechercher sur PimEyes</Button>
-                  </Link>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardContent className="p-4 space-y-2">
-                  <h3 className="font-semibold">
-                    🧠 Apprends les Google Dorks
-                  </h3>
-                  <p>
-                    Découvre comment utiliser les Google Dorks pour effectuer
-                    des recherches avancées sur Google.
-                  </p>
-                  <Link
-                    href="https://www.jedha.co/formation-cybersecurite/google-dorks-techniques-gratuites-pour-exploiter-google"
-                    target="_blank"
-                  >
-                    <Button variant="outline">📖 Lire le tutoriel</Button>
                   </Link>
                 </CardContent>
               </Card>
@@ -184,8 +152,6 @@ const EndCard = ({ handleRestart }: Props) => {
           </span>
         </CardDescription>
       </CardHeader>
-
-      <CardContent></CardContent>
 
       <CardFooter>
         <Button

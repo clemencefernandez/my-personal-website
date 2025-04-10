@@ -8,7 +8,6 @@ import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -60,8 +59,7 @@ export function StartCard({ goToNextStep }: Props) {
             s'en être tirer sans encombre. Mais qu'en est-il vraiment ?`}
           </span>
           <span>
-            Votre mission : <strong>mener l’enquête</strong> à travers internet,
-            déjouer les pièges et trouver ses données personnelles.
+            Votre mission : <strong>mener l’enquête</strong> à travers internet.
           </span>
           <span>
             Vous allez plonger dans le monde de{" "}
@@ -90,14 +88,8 @@ export function StartCard({ goToNextStep }: Props) {
                 <FormItem>
                   <FormLabel>{`Nom de l'équipe`}</FormLabel>
                   <FormControl>
-                    <Input
-                      placeholder="Ton nom d'équipe (le nom le plus drôle gagne des points !)"
-                      {...field}
-                    />
+                    <Input placeholder="Ton nom d'équipe" {...field} />
                   </FormControl>
-                  <FormDescription>
-                    Ce nom s’affichera dans le score final.
-                  </FormDescription>
                   <FormMessage />
                 </FormItem>
               )}
@@ -105,7 +97,7 @@ export function StartCard({ goToNextStep }: Props) {
           </CardContent>
           <CardFooter>
             <Button className="w-full mt-5" type="submit">
-              🚀 Prêts ? C’est parti !
+              Commencer le jeu !
             </Button>
           </CardFooter>
         </form>
