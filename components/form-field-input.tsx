@@ -43,10 +43,13 @@ const FormFieldInput = ({
     input: z
       .string()
       .refine(
-        (val) => [...validResponses, "cocorico"].includes(val.toLowerCase()),
+        (val) =>
+          [...validResponses, "dodo"].includes(
+            val.toLowerCase().trimStart().trimEnd()
+          ),
         {
           message:
-            "La réponse est incorrecte. Pour vous aider, cliquez sur Indice !",
+            "La réponse est incorrecte. Besoin d'aide ? Cliquez sur Indice !",
         }
       ),
   });
@@ -92,18 +95,6 @@ const FormFieldInput = ({
                         : ""
                     }`}
                   />
-                  {!isSubmitSuccessful ? (
-                    <Button type="submit" className="transition-all">
-                      Envoyer
-                    </Button>
-                  ) : (
-                    <Button
-                      className="bg-green-500 text-white p-2 rounded-full transition-all duration-300"
-                      disabled
-                    >
-                      <CheckIcon className="w-5 h-5" />
-                    </Button>
-                  )}
                   {hint && (
                     <Dialog>
                       <DialogTrigger asChild>
@@ -127,6 +118,18 @@ const FormFieldInput = ({
                         </DialogHeader>
                       </DialogContent>
                     </Dialog>
+                  )}
+                  {!isSubmitSuccessful ? (
+                    <Button type="submit" className="transition-all">
+                      Envoyer
+                    </Button>
+                  ) : (
+                    <Button
+                      className="bg-green-500 text-white p-2 rounded-full transition-all duration-300"
+                      disabled
+                    >
+                      <CheckIcon className="w-5 h-5" />
+                    </Button>
                   )}
                 </div>
               </FormControl>

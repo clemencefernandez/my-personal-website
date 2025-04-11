@@ -57,15 +57,14 @@ export const steps: Steps = [
                 n’est laissé au hasard.
               </span>
               <span>
-                {`Télécharge la photo et consulte le livret d’enquête pour t’aider
-                dans ta fouille :`}{" "}
+                {`Télécharge la photo et `}{" "}
                 <a
-                  href="https://troubled-trollius-231.notion.site/Les-m-tadonn-es-1ccae4a6665e8013a00aff9982cd4aa4"
+                  href="https://online-metadata.com/fr"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="underline underline-offset-4 hover:text-primary transition-colors"
                 >
-                  {`Ouvrir le livret d'aide`}
+                  {`va sur le site online-metadata.com.`}
                 </a>
               </span>
             </>
@@ -189,14 +188,12 @@ export const steps: Steps = [
     title: "Vérifier la fuite de données",
     description: (
       <div className="flex flex-col gap-4 text-justify">
+        <span>{`Super ! Vous avez trouvé l’adresse mail de Tom.`}</span>
         <span>
-          {`
-          Souvent, les personnes réutilisent leur mail sur plusieurs
-          sites. Cela signifie que si le mail de Tom a été impliqué dans une
-          fuite, il pourrait y avoir des informations compromises ailleurs.`}
+          {`Peut-être qu’elle a été retrouvée dans une fuite de données sur Internet ?`}
         </span>
         <span>
-          Pour cela, nous allons aller sur le site{" "}
+          👉 Allez sur le site{" "}
           <a
             href="https://haveibeenpwned.com/"
             target="_blank"
@@ -204,15 +201,23 @@ export const steps: Steps = [
             className="underline"
           >
             Have I Been Pwned
-          </a>{" "}
-          {`pour vérifier si certaines nouvelles données de Tom apparaissent dans des fuites de données.`}
+          </a>
+          {". "}
+        </span>
+        <span>
+          {`Entrez l’adresse mail de Tom pour voir si elle a été exposée dans un ancien incident (comme un site qui a eu un bug ou une faille).`}
         </span>
       </div>
     ),
     inputs: [
       {
-        label:
-          "Lorsqu'on analyse l'adresse mail de Tom sur le site de cybersécurité, on voit qu'il apparaît dans une fuite de donnée. Quel est le site concerné ?",
+        label: "Est-ce que Tom a été victime d'une fuite de donnée ?",
+        shortLabel: "Est-ce que Tom a été victime d'une fuite de donnée ?",
+        validResponses: ["oui"],
+        responseFormat: "Format de réponse : Oui ou Non",
+      },
+      {
+        label: "Quel est le site concerné ?",
         shortLabel: "Site où il y a eu fuite de données",
         validResponses: [
           "le slip français",
@@ -227,21 +232,13 @@ export const steps: Steps = [
           description: (
             <div className="flex flex-col gap-4">
               <span>
-                {`Va sur le site Have I Been Pwned, entre l'adresse mail de Tom et regarde les résultats en bas de la page. Un site particulièrement intéressant pourrait être celui d'une
-                marque de vêtements. Recherche les fuites associées à cet email
-                et essaie de repérer le site dans lequel il pourrait avoir été
-                exposé.`}
+                {`Va sur le site Have I Been Pwned, entre l'adresse mail de Tom et regarde les résultats en bas de la page.
+
+                `}
               </span>
               <span>
-                {`N'hésite pas à utiliser le livret pour t'aider :`}{" "}
-                <a
-                  href="https://troubled-trollius-231.notion.site/Teste-ta-s-curit-1ccae4a6665e8093b996d6eb0594a950"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="underline underline-offset-4 hover:text-primary transition-colors"
-                >
-                  {`Ouvrir le livret d'aide`}
-                </a>
+                {`Un site particulièrement intéressant pourrait être celui d'une
+                marque de vêtements.`}
               </span>
             </div>
           ),
@@ -326,6 +323,9 @@ export const steps: Steps = [
         shortLabel: "Lieu où il a l'habitude d'aller",
         validResponses: [
           "plage de marinella",
+          "plage des sables d'or",
+          "sables d'or",
+          "La plage des sables d'or",
           "sable d'or",
           "sable dor",
           "plage de sable dor",
@@ -485,6 +485,9 @@ export const steps: Steps = [
           "henriette64!",
           "64henriette!",
           "henriette64!",
+          "henriette64@",
+          "henriette64.",
+          "henriette64-",
           "henriette!64",
           "!64henriette",
           "64!henriette",

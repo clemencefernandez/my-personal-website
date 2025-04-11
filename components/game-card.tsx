@@ -12,6 +12,7 @@ import {
 
 import FormFieldInputs from "./form-field-inputs";
 import { GamePage } from "@/types/model";
+import { steps } from "@/data/steps";
 
 type Props = { stepItem: GamePage; goToNextStep: () => void; step: number };
 
@@ -35,7 +36,7 @@ const GameCard: React.FC<Props> = ({ stepItem, goToNextStep, step }: Props) => {
   return (
     <Card className="w-full max-w-7xl">
       <CardHeader>
-        <CardTitle>{`Étape ${step} : ${title}`}</CardTitle>
+        <CardTitle>{`Étape ${step}/${steps.length - 2} : ${title}`}</CardTitle>
         <CardDescription className="flex flex-col gap-4">
           {description}
         </CardDescription>

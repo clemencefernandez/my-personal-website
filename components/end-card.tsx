@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { Button } from "./ui/button";
+import Image from "next/image";
 import {
   Card,
   CardContent,
@@ -9,7 +10,6 @@ import {
   CardTitle,
 } from "./ui/card";
 import { supabase } from "@/lib/supabaseClient";
-import Link from "next/link";
 
 type Props = {
   handleRestart: () => void;
@@ -69,25 +69,17 @@ const EndCard = ({ handleRestart }: Props) => {
           <span>
             Bien joué équipe <strong>{userName}</strong> ! Grâce à votre
             persévérance, vous avez réussi à{" "}
-            <strong>craquer le mot de passe</strong> de Tom Fraize et à accéder
-            à ses <strong>coordonnées bancaires</strong>. Vous avez le combo
-            parfait : numéro de téléphone + mot de passe personnel !
+            <strong>retrouver le hacker</strong> de Tom Fraize et à accéder à
+            ses <strong>données personnelles</strong>.
           </span>
           <span>
-            Mais comme vous êtes <strong>véritable hacker éthique</strong>, vous
-            n’en ferez <strong>évidemment rien</strong>. vous savez que le but,
-            c’est d’apprendre, pas de nuire 💡.
+            Mais comme vous êtes{" "}
+            <strong>des véritables hackers éthiques</strong>, vous n’en ferez{" "}
+            <strong>évidemment rien</strong> 💡.
           </span>
-          <span>
-            Vous venez de comprendre comment des données peuvent être
-            utilisées... et vous avez relevé l’enquête avec brio !
-          </span>
-          <span>
+          <span>Vous avez relevé l’enquête avec brio !</span>
+          <span className="py-4 self-center">
             ⏱️ Temps réalisé : <strong>{formattedTime}</strong>
-          </span>
-          <span>
-            Vous voulez donner votre avis sur ce jeu ? Envoyez un DM à{" "}
-            <strong>@tom_fraize</strong> sur Insta 😉
           </span>
           <span>
             📚 Pour revoir tous les outils utilisés et les bonnes pratiques :{" "}
@@ -118,11 +110,13 @@ const EndCard = ({ handleRestart }: Props) => {
                     Vérifie si ton adresse e-mail ou ton numéro de téléphone ont
                     été compromis dans des fuites de données.
                   </p>
-                  <Link href="https://haveibeenpwned.com" target="_blank">
-                    <Button variant="outline">
-                      🔎 Tester sur Have I Been Pwned
-                    </Button>
-                  </Link>
+                  <Image
+                    src="/haveIbeenpwned.png"
+                    alt="QR code vers le livret d'aide - Have I Been Pwned"
+                    width={120}
+                    height={120}
+                    className="hidden md:block"
+                  />
                 </CardContent>
               </Card>
 
@@ -136,9 +130,13 @@ const EndCard = ({ handleRestart }: Props) => {
                     Utilise la reconnaissance faciale pour savoir si des images
                     de toi sont disponibles sur le web.
                   </p>
-                  <Link href="https://pimeyes.com" target="_blank">
-                    <Button variant="outline">🔎 Rechercher sur PimEyes</Button>
-                  </Link>
+                  <Image
+                    src="/pimeyes.svg"
+                    alt="QR code vers le livret d'aide - Pimeyes"
+                    width={120}
+                    height={120}
+                    className="hidden md:block"
+                  />
                 </CardContent>
               </Card>
             </div>

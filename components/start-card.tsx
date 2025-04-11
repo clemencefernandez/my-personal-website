@@ -13,7 +13,6 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
 
 import {
   Card,
@@ -23,6 +22,7 @@ import {
   CardHeader,
   CardTitle,
 } from "./ui/card";
+import { Input } from "./ui/input";
 
 const FormSchema = z.object({
   username: z.string().min(2, {
@@ -38,7 +38,7 @@ export function StartCard({ goToNextStep }: Props) {
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
-      username: "",
+      username: "Pas de nom d'équipe",
     },
   });
 
@@ -54,15 +54,16 @@ export function StartCard({ goToNextStep }: Props) {
       <CardHeader>
         <CardTitle>{`Bienvenue !`}</CardTitle>
         <CardDescription className="space-y-3 flex flex-col gap-4">
+          <span>{`Le site de "Tisse Ta Toile" a été piraté.`}</span>
           <span>
-            {`Tisse Ta Toile a été piraté par un cybercriminel. Le hacker pense
-            s'en être tirer sans encombre. Mais qu'en est-il vraiment ?`}
+            Votre mission : <strong>trouver le hacker</strong>.
           </span>
           <span>
-            Votre mission : <strong>mener l’enquête</strong> à travers internet.
+            Fouillez internet pour retrouver les infos personnelles de cette
+            personne.
           </span>
           <span>
-            Vous allez plonger dans le monde de{" "}
+            {`C'est ce qu'on appelle`}{" "}
             <a
               href="https://www.cnil.fr/fr/recoupement-dinformations-en-ligne-ce-que-vous-publiez-peut-devoiler-votre-vie-privee"
               target="_blank"
@@ -70,7 +71,6 @@ export function StartCard({ goToNextStep }: Props) {
               className="underline underline-offset-4 hover:text-primary transition-colors"
             >{`l'OSINT…`}</a>
             {". "}
-            Mais n’oubliez pas : vous êtes des hackers éthiques 🧠💻.
           </span>
         </CardDescription>
       </CardHeader>
