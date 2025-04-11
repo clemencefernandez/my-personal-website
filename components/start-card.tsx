@@ -38,7 +38,7 @@ export function StartCard({ goToNextStep }: Props) {
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
-      username: "Pas de nom d'équipe",
+      username: "",
     },
   });
 
