@@ -13,15 +13,7 @@ export const steps: Steps = [
     description: (
       <>
         <span>
-          Lors de l’investigation, les administrateurs ont découvert une{" "}
-          <Link
-            href="/ahah_bienfait_2.jpeg"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline underline-offset-4 text-primary hover:text-secondary transition-colors"
-          >
-            image
-          </Link>{" "}
+          Lors de l’investigation, les administrateurs ont découvert une image
           laissée par le cybercriminel.
         </span>
         <span>
