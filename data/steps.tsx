@@ -15,7 +15,7 @@ export const steps: Steps = [
         <span>
           Lors de l’investigation, les administrateurs ont découvert une{" "}
           <Link
-            href="/ahah_bienfait_2.png"
+            href="/ahah_bienfait_2.jpeg"
             target="_blank"
             rel="noopener noreferrer"
             className="underline underline-offset-4 text-primary hover:text-secondary transition-colors"
