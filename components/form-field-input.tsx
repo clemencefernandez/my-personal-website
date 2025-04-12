@@ -64,7 +64,6 @@ const FormFieldInput = ({
   const onSubmit = () => {
     setIsCorrect(true);
     form.setValue("input", validResponses[0]);
-    console.log({ validResponses });
   };
 
   const isSubmitSuccessful = form.formState.isSubmitSuccessful;

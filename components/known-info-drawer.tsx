@@ -6,6 +6,7 @@ import { Button } from "./ui/button";
 import {
   Drawer,
   DrawerContent,
+  DrawerDescription,
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
@@ -41,12 +42,16 @@ export default function KnownInfoDrawer() {
           Infos connues
         </Button>
       </DrawerTrigger>
+
       <DrawerContent className="h-full max-w-xs rounded-none border-l border-gray-200 bg-white p-4">
         <DrawerHeader>
           <DrawerTitle>
             <UserRound />
             Infos connues sur Tom
           </DrawerTitle>
+          <DrawerDescription>
+            Toutes les informations que vous avez déjà récoltées.
+          </DrawerDescription>
           <div className="flex flex-col gap-1">
             {knownInfos
               ? knownInfos.map((info, key) => (
