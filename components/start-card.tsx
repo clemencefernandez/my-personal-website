@@ -53,14 +53,14 @@ export function StartCard({ goToNextStep }: Props) {
     <Card className="w-full max-w-5xl">
       <CardHeader>
         <CardTitle>{`Bienvenue !`}</CardTitle>
-        <CardDescription className="space-y-3 flex flex-col gap-4">
-          <span>{`Le site de "Tisse Ta Toile" a été piraté.`}</span>
+        <CardDescription className="sm:py-3 flex flex-col gap-4">
+          <span>{`Le site internet de "Tisse Ta Toile" a été piraté.`}</span>
           <span>
             Votre mission : <strong>trouver le hacker</strong>.
           </span>
           <span>
-            Fouillez internet pour retrouver les infos personnelles de cette
-            personne.
+            Fouillez internet pour retrouver les infos personnelles de cet
+            individu.
           </span>
           <span>
             {`C'est ce qu'on appelle`}{" "}
@@ -85,7 +85,7 @@ export function StartCard({ goToNextStep }: Props) {
                 <FormItem>
                   <FormLabel>{`Nom de l'équipe`}</FormLabel>
                   <FormControl>
-                    <Input placeholder="Ton nom d'équipe" {...field} />
+                    <Input placeholder="Votre nom d'équipe" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>

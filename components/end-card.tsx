@@ -65,7 +65,7 @@ const EndCard = ({ handleRestart }: Props) => {
     <Card className="w-full max-w-7xl">
       <CardHeader>
         <CardTitle>🎉 Mission accomplie !</CardTitle>
-        <CardDescription className="space-y-2 flex flex-col gap-4">
+        <CardDescription className="space-y-2 flex flex-col gap-4 sm:py-3">
           <span>
             Bien joué équipe <strong>{userName}</strong> ! Grâce à votre
             persévérance, vous avez réussi à{" "}

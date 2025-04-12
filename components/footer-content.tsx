@@ -1,41 +1,36 @@
 "use client";
 
 import { Button } from "./ui/button";
-import { HelpingHandIcon, RotateCcw } from "lucide-react";
+import { BookMarked, RotateCcw } from "lucide-react";
 import { useGame } from "@/context/game-context";
-import Image from "next/image";
 import KnownInfoDrawer from "./known-info-drawer";
 
 export default function FooterContent() {
-  const { handleResetAndReload } = useGame();
+  const { handleResetAndReload, step } = useGame();
 
   return (
     <div className="rounded-md flex flex-wrap gap-6 items-center justify-center px-4 w-full h-full">
-      {/* Section Aide */}
-      <div className="flex items-center gap-3 rounded-md text-sm font-medium">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4 text-white!"
-          href="https://troubled-trollius-231.notion.site/Protection-num-rique-1c7ae4a6665e801fa652f71ab2b1fbc6"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <HelpingHandIcon className="h-4 w-4" />
-          Aide
-        </a>
-
-        <Image
-          src="/QRCodeProtectionNumerique.svg"
-          alt="QR code vers le livret d'aide"
-          width={120}
-          height={120}
-          className="hidden md:block"
-        />
-      </div>
-      <Button variant="secondary" onClick={handleResetAndReload}>
-        <RotateCcw className="mr-2 h-4 w-4" />
-        <span className="hidden md:block">Recommencer</span>
+      {step !== 0 && (
+        <Button variant="secondary" onClick={handleResetAndReload}>
+          <RotateCcw className="mr-2 h-4 w-4" />
+          <span className="hidden md:block">Recommencer</span>
+        </Button>
+      )}
+      <Button
+        variant="secondary"
+        onClick={() =>
+          window.open(
+            "https://troubled-trollius-231.notion.site/Protection-num-rique-1c7ae4a6665e801fa652f71ab2b1fbc6",
+            "_blank",
+            "noopener,noreferrer"
+          )
+        }
+      >
+        <BookMarked className="h-4 w-4 mr-2" />
+        Le guide
       </Button>
-      <KnownInfoDrawer />s
+
+      <KnownInfoDrawer />
     </div>
   );
 }

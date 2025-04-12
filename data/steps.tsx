@@ -295,14 +295,7 @@ export const steps: Steps = [
           {`Tom nous a fait la gentillesse de rendre son profil public.  Nous pouvons maintenant avoir accès à des informations personnelles.`}
         </span>
         <span>
-          Sur son{" "}
-          <Link
-            href="/image_insta.jpg"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Insta
-          </Link>{" "}
+          Sur son Insta,
           {`Tom a posté `}
           une photo où il est en train de profiter du soleil.
         </span>
@@ -372,12 +365,20 @@ export const steps: Steps = [
       <>
         <span>
           {`Tom, c'est ce pote qui partage beaucoup (trop ?) de sa vie sur
-        Instagram`}
-          .
+         `}{" "}
+          <a
+            href="https://www.instagram.com/tom_fraize/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline"
+          >
+            Instagram
+          </a>
+          {". "}
         </span>
         <span>
           Mais ce qu’il ne réalise pas, c’est que ces infos, même anodines,
-          peuvent être très précieuses.
+          peuvent en dire beaucoup sur sa vie privée.
         </span>
         Scrollez le profil de Tom et notez les infos qu’il dévoile sans s’en
         rendre compte.
@@ -392,6 +393,9 @@ export const steps: Steps = [
           "streaming, jeux vidéos, moto et surf",
           "moto",
           "surf",
+          "le surf",
+          "la moto",
+          "les jeux vidéos",
           "ride",
           "gaming",
           "jeux vidéos",
@@ -467,12 +471,12 @@ export const steps: Steps = [
           {`Avec toutes ces données, vous avez une chance d'accéder à son compte bancaire.. `}
         </span>
         <span>
-          {`Vous avez déjà son numéro de téléphone grâce à la fuite de données, qui
-          correspond à l'identifiant. Vous devez maintenant trouver son mot de
-          passe.`}
+          {`Avec la fuite de donnée constatée sur le site Have I Been Pwned, vous avez récupéré son numéro de téléphone.`}
         </span>
+        <span>Vous devez maintenant trouver son mot de passe.</span>
+
         <span>
-          Une grande partie des mots de passe sont basés sur des informations
+          Une grande partie des mots de passe contient des informations
           personnelles simples.
         </span>
       </>

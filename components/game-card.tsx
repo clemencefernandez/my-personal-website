@@ -37,7 +37,7 @@ const GameCard: React.FC<Props> = ({ stepItem, goToNextStep, step }: Props) => {
     <Card className="w-full max-w-7xl">
       <CardHeader>
         <CardTitle>{`Étape ${step}/${steps.length - 2} : ${title}`}</CardTitle>
-        <CardDescription className="flex flex-col gap-4">
+        <CardDescription className="flex flex-col gap-4 sm:py-3">
           {description}
         </CardDescription>
       </CardHeader>

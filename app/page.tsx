@@ -21,7 +21,7 @@ const PageContent = () => {
   const stepItem = steps[step];
   if (!isValidGameStep(stepItem)) {
     console.error("Invalid step number:", { step }, stepItem);
-    return null; // replace by "error content"
+    return null;
   }
 
   return (
@@ -36,15 +36,15 @@ const PageContent = () => {
 
 export default function Page() {
   return (
-    <div className="flex flex-col min-h-screen font-[family-name:var(--font-geist-mono)]">
-      <GameProvider>
-        <main className="flex-1 flex justify-center items-center w-full p-4 sm:p-20">
+    <GameProvider>
+      <div className="font-[family-name:var(--font-geist-mono)] flex flex-col justify-center h-screen">
+        <main className="flex justify-center items-center w-full p-4 sm:py-10">
           <PageContent />
         </main>
         <footer className="w-full">
           <FooterContent />
         </footer>
-      </GameProvider>
-    </div>
+      </div>
+    </GameProvider>
   );
 }
