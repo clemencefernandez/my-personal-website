@@ -44,9 +44,7 @@ const FormFieldInput = ({
       .string()
       .refine(
         (val) =>
-          [...validResponses, "dodo"].includes(
-            val.toLowerCase().trimStart().trimEnd()
-          ),
+          validResponses.includes(val.toLowerCase().trimStart().trimEnd()),
         {
           message:
             "La réponse est incorrecte. Besoin d'aide ? Cliquez sur Indice !",
