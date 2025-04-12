@@ -95,89 +95,88 @@ const EndCard = ({ handleRestart }: Props) => {
           </span>
         </CardDescription>
       </CardHeader>
-      <CardContent>
-        <span className="pt-2 gap-4 flex flex-col">
-          <h2 className="text-2xl font-bold">
-            {`🕵️‍♂️ Explore l'OSINT par toi-même`}
-          </h2>
-          <p className="text-muted-foreground">
-            L’OSINT (Open Source Intelligence) consiste à collecter des
-            informations à partir de sources publiques.
-          </p>
+      <CardContent className="pt-2 gap-4 flex flex-col">
+        <h2 className="text-2xl font-bold">
+          {`🕵️‍♂️ Explore l'OSINT par toi-même`}
+        </h2>
 
-          <div className="grid md:grid-cols-2 gap-4">
-            <Card>
-              <CardContent className="px-4 py-2 flex flex-col gap-4">
-                <h3 className="font-semibold">
-                  🔐 Have I Been Pwned, pour analyser les fuites de données
-                </h3>
-                <p>
-                  Vérifie si ton adresse e-mail ou ton numéro de téléphone ont
-                  été compromis dans des fuites de données.
-                </p>
-                <Button
-                  variant="outline"
-                  className="self-end"
-                  onClick={() =>
-                    window.open(
-                      "https://troubled-trollius-231.notion.site/Outils-pour-tester-ta-s-curit-1ccae4a6665e8093b996d6eb0594a950#1ccae4a6665e80d1a452cb573ec00cac",
-                      "_blank",
-                      "noopener,noreferrer"
-                    )
-                  }
-                >
-                  <Fingerprint className="h-4 w-4 mr-2" />
-                  Vérifie si tes informations ont fuité
-                </Button>
-              </CardContent>
-            </Card>
+        <p className="text-muted-foreground">
+          L’OSINT (Open Source Intelligence) consiste à collecter des
+          informations à partir de sources publiques.
+        </p>
 
-            <Card>
-              <CardContent className="px-4 py-2 flex flex-col gap-4">
-                <h3 className="font-semibold">
-                  🖼️ PimEyes, pour retrouver ses sosies
-                </h3>
-                <p>
-                  Utilise la reconnaissance faciale pour savoir si des images de
-                  toi sont disponibles sur le web.
-                </p>
-                <Button
-                  variant="outline"
-                  className="self-end"
-                  onClick={() =>
-                    window.open(
-                      "https://troubled-trollius-231.notion.site/Outils-pour-retrouver-une-image-ou-une-personne-1ccae4a6665e8007b20cd7d21ef967ff#1ccae4a6665e80f093e0c32ee9915eae",
-                      "_blank",
-                      "noopener,noreferrer"
-                    )
-                  }
-                >
-                  <ImageDown className="h-4 w-4 mr-2" />
-                  Vérifie si des photos de toi circulent en ligne
-                </Button>
-              </CardContent>
-            </Card>
-          </div>
+        <div className="grid md:grid-cols-2 gap-4">
+          <Card>
+            <CardContent className="px-4 py-2 flex flex-col gap-4">
+              <h3 className="font-semibold">
+                🔐 Have I Been Pwned, pour analyser les fuites de données
+              </h3>
+              <p>
+                Vérifie si ton adresse e-mail ou ton numéro de téléphone ont été
+                compromis dans des fuites de données.
+              </p>
+              <Button
+                variant="outline"
+                className="self-end"
+                onClick={() =>
+                  window.open(
+                    "https://troubled-trollius-231.notion.site/Outils-pour-tester-ta-s-curit-1ccae4a6665e8093b996d6eb0594a950#1ccae4a6665e80d1a452cb573ec00cac",
+                    "_blank",
+                    "noopener,noreferrer"
+                  )
+                }
+              >
+                <Fingerprint className="h-4 w-4 mr-2" />
+                Vérifie si tes informations ont fuité
+              </Button>
+            </CardContent>
+          </Card>
 
-          <p className="text-sm text-muted-foreground">
-            {`⚠️ Assure-toi de n'utiliser ces outils que pour rechercher des
+          <Card>
+            <CardContent className="px-4 py-2 flex flex-col gap-4">
+              <h3 className="font-semibold">
+                🖼️ PimEyes, pour retrouver ses sosies
+              </h3>
+              <p>
+                Utilise la reconnaissance faciale pour savoir si des images de
+                toi sont disponibles sur le web.
+              </p>
+              <Button
+                variant="outline"
+                className="self-end"
+                onClick={() =>
+                  window.open(
+                    "https://troubled-trollius-231.notion.site/Outils-pour-retrouver-une-image-ou-une-personne-1ccae4a6665e8007b20cd7d21ef967ff#1ccae4a6665e80f093e0c32ee9915eae",
+                    "_blank",
+                    "noopener,noreferrer"
+                  )
+                }
+              >
+                <ImageDown className="h-4 w-4 mr-2" />
+                Vérifie si des photos de toi circulent en ligne
+              </Button>
+            </CardContent>
+          </Card>
+        </div>
+
+        <p className="text-sm text-muted-foreground">
+          {`⚠️ Assure-toi de n'utiliser ces outils que pour rechercher des
               informations te concernant ou avec l'autorisation explicite des
               personnes concernées. L'OSINT est puissant et doit être pratiqué
               de manière éthique et responsable.`}
-          </p>
-          <div className="mt-6 flex flex-col items-center">
-            <h3 className="font-semibold">
-              🎥 Vidéo : les bonnes pratiques cybersécurité par Micode
-            </h3>
+        </p>
 
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/adUtBK0gIHU?start=6"
-              title="YouTube video"
-            ></iframe>
-          </div>
-        </span>
+        <h2 className="text-2xl font-bold">
+          {`🎥 Vidéo : les bonnes pratiques cybersécurité par Micode`}
+        </h2>
+        <div className="mt-6 flex flex-col items-center">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/adUtBK0gIHU?start=6"
+            title="YouTube video"
+          ></iframe>
+        </div>
       </CardContent>
       <CardFooter>
         <Button
